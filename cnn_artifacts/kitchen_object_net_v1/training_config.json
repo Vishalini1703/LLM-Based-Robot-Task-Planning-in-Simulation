@@ -1,0 +1,24 @@
+{
+  "model": "KitchenObjectNet",
+  "pretrained": false,
+  "classes": [
+    "mug",
+    "apple",
+    "orange",
+    "can",
+    "cereal_box"
+  ],
+  "input_size": 320,
+  "parameter_count": 1927562,
+  "seed": 20260808,
+  "batch_size": 16,
+  "maximum_epochs": 25,
+  "early_stopping_patience": 15,
+  "optimizer": "AdamW",
+  "initial_learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "warmup_epochs": 5,
+  "schedule": "cosine",
+  "initialization": "seeded Kaiming normal backbone/fusion; seeded normal(std=0.001) prediction heads; constant objectness prior bias",
+  "initialization_fingerprint": "005d1142dd7d0c495a55b9bef80f7932f4b5c1e44de06c1ed218f3dd014aaad6"
+}

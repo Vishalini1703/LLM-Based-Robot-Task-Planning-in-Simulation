@@ -1,2 +1,244 @@
-# LLM-Based-Robot-Task-Planning-in-Simulation
-A simulation-based robotic task-planning system that uses a Large Language Model (LLM) to convert natural-language kitchen commands into structured action plans. The system uses deterministic validation before execution and demonstrates validated robot task execution using a TIAGo robot in Webots, with CNN-based object perception.
+# LLM-Based Robot Task Planning Prototype
+
+This repository implements a validated natural-language robot task-planning pipeline. Groq-hosted Llama 3.3 converts a kitchen command into a structured plan, the deterministic Python boundary verifies every step, and an execution backend runs the plan either in memory or in an adapted copy of Webots R2025a's default kitchen.
+
+## Implemented scope
+
+- Strict JSON plan contract for `navigate`, `find`, `pick`, `place`, `open`, and `close`.
+- Configurable kitchen locations, containers, objects, and robot state.
+- Deterministic precondition checks and state transitions.
+- Sequential dry-run validation on a cloned state; the input state is never mutated.
+- Stable error codes for malformed, hallucinated, or physically inconsistent plans.
+- Groq `llama-3.3-70b-versatile` planning with JSON output, retry, and explicit unsupported-command rejection.
+- Audited in-memory execution with expected-versus-observed state checks and persistent JSON run records.
+- Webots default kitchen adapted with a supervised TIAGo, task objects, arm/gripper animation, collision-aware A* navigation around fixed furniture, placement, and a physically hollow cupboard.
+- Project-designed `KitchenObjectNet` detector trained from random initialisation only on 8,000 labelled Webots frames; no imported detector architecture or pretrained weights are used.
+- ONNX Runtime inference from raw TIAGo RGB camera frames with two-of-three temporal confirmation; Webots recognition metadata is disabled during normal CNN-backed `find` actions.
+- Reproducible 30-command evaluation runner, frozen settings, metrics, confidence intervals, and failure analysis tooling.
+- Command-line validation, natural-language execution, examples, and automated tests.
+
+Physical-robot deployment and ROS 2 are out of scope.
+
+## Requirements
+
+- Python 3.10 or newer.
+- Webots R2025a for the `webots` backend.
+- A Groq API key in `.env` as `GROQ_AI_KEY` or `GROQ_API_KEY`.
+- NumPy, Pillow, and ONNX Runtime (installed with the package) for CNN inference.
+- PyTorch, ONNX, and Matplotlib only when regenerating or training the CNN.
+
+## Setup
+
+For automatic setup, run `.\setup.ps1` on Windows or `sh setup.sh` on Linux/macOS.
+The scripts create `.venv`, install the local package, and copy `.env.example`
+to `.env`. Add the Groq key to `.env` before sending a natural-language command.
+
+For manual setup, create and activate a virtual environment, then install the
+package in editable mode.
+
+### PowerShell
+
+```powershell
+py -3 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+To reproduce CNN training and all plots, install the optional training group:
+
+```powershell
+python -m pip install -e ".[cnn-training]"
+```
+
+Webots is discovered in this order:
+
+1. The `--webots-bin` command-line option.
+2. The `WEBOTS_BIN` environment variable.
+3. The installation identified by `WEBOTS_HOME`.
+4. The system `PATH`.
+
+No installation drive, graphics card, or client-specific directory is embedded
+in the application.
+
+## Run a natural-language command
+
+Use the audited in-memory backend:
+
+```powershell
+robot-task "Put the apple in the basket"
+```
+
+Use the Webots default kitchen and TIAGo controller:
+
+```powershell
+robot-task "Put the apple in the basket" --backend webots --show-webots
+```
+
+For servers, CI, RDP-disconnected sessions, or clients without a persistent
+desktop display, build the supplied CPU-inference Webots image once, then use
+Docker and Xvfb:
+
+```powershell
+docker pull cyberbotics/webots:R2025a-ubuntu22.04
+docker build -f docker/webots-cnn.Dockerfile -t robot-task-webots-cnn:R2025a .
+robot-task "Put the apple in the basket" --backend webots --webots-runtime docker --webots-docker-image robot-task-webots-cnn:R2025a
+```
+
+The Docker runtime mounts only the project directory, does not receive the Groq
+API key, uses Mesa software rendering, and removes its simulation container
+after each run. Override the image with `WEBOTS_DOCKER_IMAGE` when required.
+
+The LLM never controls Webots directly. Its JSON is parsed and validated first; Webots is launched only for a valid plan. Run records are written to `logs/runs/`.
+
+The runtime flow is:
+
+```text
+command > Groq Llama 3.3 creates a high-level JSON plan > deterministic validator approves or rejects it > Webots opens for an approved plan > TIAGo navigates around mapped furniture > KitchenObjectNet detects the requested object from RGB frames > two-of-three frames confirm it > pick/place/open/close executes > observed outcomes and images are logged
+```
+
+The LLM chooses only from the six high-level actions. The custom CNN only
+answers whether one of `mug`, `apple`, `orange`, `can`, or `cereal_box` is
+visually present and where its image box is. The validator—not either learned
+model—decides whether the action sequence is allowed.
+
+## Reproduce the custom CNN
+
+Every generated image, training metric, checkpoint, runtime log, model report,
+and plot is kept below `cnn_artifacts/kitchen_object_net_v1/`.
+
+Generate the fixed 8,000-frame dataset with a local Webots installation:
+
+```powershell
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 generate --count 8000 --runtime native --webots-bin "PATH_TO_WEBOTS_EXE"
+```
+
+The same generator has a hardware-independent Docker/Xvfb fallback:
+
+```powershell
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 generate --count 8000 --runtime docker
+```
+
+Audit the dataset, train from seeded random weights, then run the frozen
+held-out protocol:
+
+```powershell
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 audit
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 train --epochs 120 --batch-size 16 --seed 20260808 --patience 15
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 protocol
+```
+
+Run five complete CNN-backed manipulation episodes for each class (25 total):
+
+```powershell
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 e2e --webots-bin "PATH_TO_WEBOTS_EXE" --repetitions 5
+```
+
+Training deliberately has no checkpoint input and no pretrained option. The
+held-out test split is opened only after the validation checkpoint and runtime
+confidence threshold are frozen. See `evaluation.json`, `MODEL_CARD.md`,
+`architecture.json`, `provenance.json`, and `plots/` in the artifact folder for
+the measured result and visual evidence.
+
+The accepted model has 1,927,562 trainable parameters and was selected at epoch
+13 with confidence threshold `0.35`. On the untouched 1,200-image test split it
+reached mAP@0.50 `0.9918`, mAP@0.75 `0.9390`, macro precision `0.9979`, macro
+recall `0.9927`, and zero detections across 242 negative test images. The
+separate frozen 180-scene Webots protocol passed 173/180 scenes and all class
+acceptance thresholds. The final native run completed 25/25 manipulation
+episodes in fresh Webots processes; all 25 `find` observations came from the
+accepted ONNX hash, recognition metadata was used zero times, and all 35
+navigation routes met their required obstacle clearance.
+
+Run the complete model, provenance, portable fixture, plot, and end-to-end
+evidence check on CPU with:
+
+```powershell
+robot-cnn --run-root cnn_artifacts/kitchen_object_net_v1 verify
+```
+
+Build the code-and-code-documentation submission ZIP (the large generated
+dataset and training checkpoints are deliberately excluded):
+
+```powershell
+python tools/build_submission_archive.py
+```
+
+### Linux or macOS
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e .
+```
+
+## Validate the supplied examples
+
+Run a valid plan:
+
+```bash
+robot-plan examples/valid_apple_to_basket.json
+```
+
+Run a plan that is rejected because it tries to place an object inside a closed cupboard:
+
+```bash
+robot-plan examples/invalid_closed_cupboard.json
+```
+
+The command prints a JSON result. Exit code `0` means valid, `1` means the plan was rejected, and `2` means the input or world configuration could not be read.
+
+The CLI uses `config/kitchen.json` by default. Supply a different configuration with:
+
+```bash
+robot-plan path/to/plan.json --world path/to/kitchen.json
+```
+
+## Run the tests
+
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Run an evaluation
+
+The archive includes the frozen 30-command catalogue and five-repetition
+protocol. Run a fresh 150-trial evaluation with:
+
+```powershell
+python -m robot_planner.evaluation_cli run
+```
+
+Generate the standard and extended analysis after collection:
+
+```powershell
+python -m robot_planner.evaluation_cli analyse
+python tools/extended_analysis.py
+```
+
+See [docs/evaluation-protocol.md](docs/evaluation-protocol.md) and
+[docs/reproducibility.md](docs/reproducibility.md) for the protocol and clean
+setup procedure.
+
+## Repository layout
+
+```text
+config/                 Constrained kitchen state
+docs/                   Design and contract documentation
+examples/               Valid and deliberately invalid plans
+schemas/                Machine-readable JSON plan schema
+src/robot_planner/      World model, actions, validator, and CLI
+tests/                   Unit and sequential-validation tests
+webots/                  Adapted default kitchen, TIAGo controller, runtime exchange
+cnn_artifacts/           Dataset audit, model, metrics, logs, checkpoints, and plots
+evaluation/              Frozen catalogue and reproducible evaluation settings
+tools/                   Analysis and safe archive builders
+setup.ps1 / setup.sh     One-command local setup
+```
+
+## Safety boundary
+
+Validation is fail-fast and deterministic. It parses the plan, clones the initial world, applies every action to the clone in order, and stops at the first impossible step. A valid result contains the predicted final state. A rejected result contains an error code, message, and failing zero-based step index. Both the memory and Webots executors independently recheck the plan before execution.
+
+See [docs/architecture.md](docs/architecture.md) and [docs/plan-contract.md](docs/plan-contract.md) for the full technical contract.

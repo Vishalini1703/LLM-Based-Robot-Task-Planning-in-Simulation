@@ -1,0 +1,72 @@
+{
+  "name": "KitchenObjectNet",
+  "origin": "project-designed",
+  "pretrained": false,
+  "input": [
+    "batch",
+    3,
+    320,
+    320
+  ],
+  "backbone_feature_shapes": {
+    "stage_2": [
+      "batch",
+      96,
+      40,
+      40
+    ],
+    "stage_3": [
+      "batch",
+      160,
+      20,
+      20
+    ],
+    "stage_4": [
+      "batch",
+      256,
+      10,
+      10
+    ]
+  },
+  "fused_feature_shape": [
+    "batch",
+    96,
+    40,
+    40
+  ],
+  "heads": {
+    "objectness": [
+      "batch",
+      1,
+      40,
+      40
+    ],
+    "classes": [
+      "batch",
+      5,
+      40,
+      40
+    ],
+    "sizes": [
+      "batch",
+      2,
+      40,
+      40
+    ],
+    "offsets": [
+      "batch",
+      2,
+      40,
+      40
+    ]
+  },
+  "trainable_parameters": 1927562,
+  "parameter_budget": 6000000,
+  "loss": {
+    "objectness": "balanced focal binary cross entropy",
+    "classification": "cross entropy",
+    "box": "5 * complete IoU",
+    "offset": "smooth L1"
+  },
+  "decoding": "centre cell plus sigmoid offset/size; class-wise NMS"
+}

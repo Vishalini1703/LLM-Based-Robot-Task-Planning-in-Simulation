@@ -1,0 +1,145 @@
+{
+  "status": "passed",
+  "problems": [],
+  "pretrained_weights_used": false,
+  "imported_detector_architecture_used": false,
+  "onnx_sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+  "cpu_smoke": {
+    "provider": [
+      "CPUExecutionProvider"
+    ],
+    "inference_ms": 11.827800000901334,
+    "black_frame_detections": 0
+  },
+  "fixture_smoke": {
+    "count": 6,
+    "passed": 6,
+    "results": [
+      {
+        "file": "mug.jpg",
+        "expected": "mug",
+        "detected": [
+          "mug"
+        ],
+        "passed": true
+      },
+      {
+        "file": "apple.jpg",
+        "expected": "apple",
+        "detected": [
+          "apple"
+        ],
+        "passed": true
+      },
+      {
+        "file": "orange.jpg",
+        "expected": "orange",
+        "detected": [
+          "orange"
+        ],
+        "passed": true
+      },
+      {
+        "file": "can.jpg",
+        "expected": "can",
+        "detected": [
+          "can"
+        ],
+        "passed": true
+      },
+      {
+        "file": "cereal_box.jpg",
+        "expected": "cereal_box",
+        "detected": [
+          "cereal_box"
+        ],
+        "passed": true
+      },
+      {
+        "file": "negative.jpg",
+        "expected": null,
+        "detected": [],
+        "passed": true
+      }
+    ]
+  },
+  "e2e_summary": {
+    "schema_version": 1,
+    "status": "completed",
+    "isolation": "fresh Webots process and freshly loaded world per episode",
+    "episode_count": 25,
+    "passed": 25,
+    "failed": 0,
+    "process_exit_nonzero": 0,
+    "cnn_find_steps": 25,
+    "cnn_find_verified": 25,
+    "verified_by_class": {
+      "mug": 5,
+      "apple": 5,
+      "orange": 5,
+      "can": 5,
+      "cereal_box": 5
+    },
+    "recognition_metadata_used_events": 0,
+    "model_sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+    "observed_model_hashes": [
+      "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96"
+    ],
+    "navigation_routes": 35,
+    "minimum_obstacle_clearance": 0.3999999999999999,
+    "clearance_violations": 0,
+    "raw_evidence_sha256": {
+      "e2e_result.json": "b60dd4d86b92cd465b5f765a51ccd6199326182e94f3a39ee8219d26d54c479b",
+      "e2e_controller.jsonl": "df196d5ee3f5e3a4a91a436b5c8cccd64ea393bd62c08c919b5fd7ea8aa0e74b"
+    }
+  },
+  "plot_count": 8,
+  "plots": [
+    "plots/confusion_matrix.png",
+    "plots/dataset_distribution.png",
+    "plots/difficulty_metrics.png",
+    "plots/per_class_metrics.png",
+    "plots/perception_180.png",
+    "plots/sample_predictions.png",
+    "plots/threshold_selection.png",
+    "plots/training_curves.png"
+  ],
+  "log_count": 35,
+  "logs": [
+    "logs/dataset_controller.jsonl",
+    "logs/dataset_launch.json",
+    "logs/dataset_result.json",
+    "logs/dataset_screenshots",
+    "logs/dataset_webots_stderr.log",
+    "logs/dataset_webots_stdout.log",
+    "logs/docker_build.log",
+    "logs/docker_smoke.log",
+    "logs/docker_smoke_clean.log",
+    "logs/docker_smoke_run",
+    "logs/docker_smoke_run_clean",
+    "logs/docker_smoke_with_torus_error.log",
+    "logs/e2e_controller.jsonl",
+    "logs/e2e_episodes",
+    "logs/e2e_launch.json",
+    "logs/e2e_plans.json",
+    "logs/e2e_result.json",
+    "logs/e2e_webots_stderr.log",
+    "logs/e2e_webots_stdout.log",
+    "logs/perception_180_predictions.jsonl",
+    "logs/smoke_dataset_controller.jsonl",
+    "logs/smoke_dataset_result.json",
+    "logs/smoke_docker_webots.log",
+    "logs/smoke_screenshots",
+    "logs/smoke_webots_pid.txt",
+    "logs/smoke_webots_stderr.log",
+    "logs/smoke_webots_stdout.log",
+    "logs/smoke_xvfb.log",
+    "logs/training_attempt_01.log",
+    "logs/training_attempt_01_metrics.jsonl",
+    "logs/training_attempt_02_combined.log",
+    "logs/training_attempt_02_metrics.jsonl",
+    "logs/training_attempt_03_startup.log",
+    "logs/training_attempt_04_combined.log",
+    "logs/training_attempt_04_metrics.jsonl"
+  ]
+}

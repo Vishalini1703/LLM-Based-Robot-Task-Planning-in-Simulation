@@ -1,0 +1,11 @@
+{
+  "model": "KitchenObjectNet",
+  "pretrained_weights_used": false,
+  "imported_model_architecture_used": false,
+  "initial_checkpoint_sha256": "7292541ee97db384be47e9b599dbb9af1bc70bf3a94d7bcb1a7143507e8ce303",
+  "initialization_fingerprint": "005d1142dd7d0c495a55b9bef80f7932f4b5c1e44de06c1ed218f3dd014aaad6",
+  "best_checkpoint_sha256": "d1c872bc9e7690630a0d58d28e368aa0e72f3529dd5d432d9589ab50b99112dd",
+  "onnx_sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+  "dataset_annotation_sha256": "26f7f33d35c2fe8f54e330f1d920f9b268fc8d1512fb390138de987a7c6225aa",
+  "seed": 20260808
+}

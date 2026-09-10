@@ -1,0 +1,49 @@
+{
+  "plan_id": "example-valid-002",
+  "goal": "Put the mug in the cupboard and close it",
+  "steps": [
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "shelf"
+      }
+    },
+    {
+      "action": "find",
+      "arguments": {
+        "object": "mug"
+      }
+    },
+    {
+      "action": "pick",
+      "arguments": {
+        "object": "mug"
+      }
+    },
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "cupboard"
+      }
+    },
+    {
+      "action": "open",
+      "arguments": {
+        "container": "cupboard"
+      }
+    },
+    {
+      "action": "place",
+      "arguments": {
+        "object": "mug",
+        "location": "cupboard"
+      }
+    },
+    {
+      "action": "close",
+      "arguments": {
+        "container": "cupboard"
+      }
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "catalog": "evaluation/commands.json",
+  "world": "config/kitchen.json",
+  "model": "llama-3.3-70b-versatile",
+  "temperature": 0,
+  "max_completion_tokens": 1200,
+  "max_attempts": 2,
+  "timeout_seconds": 30,
+  "repetitions": 5,
+  "backend": "memory",
+  "reset_policy": "Reload config/kitchen.json before every independent trial.",
+  "retry_policy": "At most one validator-guided correction after the first response.",
+  "interruption_policy": "Retain failed API or runtime trials; resume only missing trial IDs.",
+  "exclusion_policy": "Exclude no completed trial silently. Record and justify exclusions in the trial index.",
+  "pilot_policy": "Run one command from each category before freezing; pilot records are not part of final results.",
+  "webots_confirmation": [
+    "Put the apple in the basket.",
+    "Move the mug from the shelf to the table.",
+    "Put the mug in the cupboard and close it."
+  ],
+  "frozen_files": [
+    "pyproject.toml",
+    "config/kitchen.json",
+    "evaluation/commands.json",
+    "schemas/plan.schema.json",
+    "src/robot_planner/actions.py",
+    "src/robot_planner/evaluation.py",
+    "src/robot_planner/executor.py",
+    "src/robot_planner/llm.py",
+    "src/robot_planner/models.py",
+    "src/robot_planner/navigation.py",
+    "src/robot_planner/pipeline.py",
+    "src/robot_planner/validator.py",
+    "src/robot_planner/webots_executor.py",
+    "webots/controllers/robot_task_controller/robot_task_controller.py",
+    "webots/worlds/kitchen_llm.wbt"
+  ]
+}

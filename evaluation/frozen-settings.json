@@ -1,0 +1,28 @@
+{
+  "frozen_at": "2026-08-05T22:39:13.665298+00:00",
+  "protocol_version": "1.0",
+  "model": "llama-3.3-70b-versatile",
+  "temperature": 0,
+  "max_completion_tokens": 1200,
+  "max_attempts": 2,
+  "timeout_seconds": 30,
+  "repetitions": 5,
+  "backend": "memory",
+  "hashes": {
+    "pyproject.toml": "3ecf1fea8b1180fb9ee842734f22986b8f8d8098dc95c3c0c1e508d0b3d645c1",
+    "config/kitchen.json": "68b6fb5e45c5785dfd04dc6d9c3223d2d87d6bb24468e30aaf6569288bfc89fe",
+    "evaluation/commands.json": "2b747ea78f60318791d40bb96b8fdff57a22c3a9558dde210155a4d004670fff",
+    "schemas/plan.schema.json": "be9f7493c48fd5a953d1aa05283476871b4dbadd792d1c20f7f86a97c6d5ad9c",
+    "src/robot_planner/actions.py": "fc811a50d011025b418cb22a9cdb41a3c04eacf17df923e487bd1ab7e9981669",
+    "src/robot_planner/evaluation.py": "cc550845066d6cae8c0882202a856e0b12a4bcea4d58f4c2f4dd33163723851e",
+    "src/robot_planner/executor.py": "908587867a08c00ec8160d81eee8f42b85809cbcc3449e94213b757fb7bd0cc4",
+    "src/robot_planner/llm.py": "e684e50a7081e20084af9455b76682a25faa90d45e327d62420c6f403935b33c",
+    "src/robot_planner/models.py": "a8d8623e957109939d32606ca7c552749578a8ef4e526d2cea6af983fcf28320",
+    "src/robot_planner/navigation.py": "df08752521ea15229bb95ef9ec9b4c3af51bfe70556cfa2c20f19db552db9f31",
+    "src/robot_planner/pipeline.py": "e1a7b710c32226f1aa10b29a37a008778f911021c55734010ef67b6d62a38c89",
+    "src/robot_planner/validator.py": "5934beffe0648a83863e510ce355425dcd5f31bcda5b349fcc4da476b39cba9a",
+    "src/robot_planner/webots_executor.py": "e83a85c49710ddbf721a788e1b4ec4646e5f33e5239215f3c8ca12d2a12f1311",
+    "webots/controllers/robot_task_controller/robot_task_controller.py": "a0e219a2d1235b98ed63681295d762795393f41de873c20c552ddef7e182860a",
+    "webots/worlds/kitchen_llm.wbt": "c8dd0ed49a6978e8f632fd88e71fd601ed63c8daa14d210f50f538c34e593057"
+  }
+}

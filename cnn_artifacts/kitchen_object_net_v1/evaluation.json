@@ -1,0 +1,389 @@
+{
+  "status": "completed",
+  "started_at": "2026-08-08T13:38:05.570662+00:00",
+  "completed_at": "2026-08-08T14:05:07.703683+00:00",
+  "duration_seconds": 1622.133021,
+  "device": "cuda",
+  "cuda_device_name": "NVIDIA GeForce RTX 3060",
+  "cuda_version": "12.4",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)]",
+  "torch": "2.6.0+cu124",
+  "onnxruntime": "1.24.4",
+  "best_epoch": 13,
+  "best_validation_map50": 0.9904407372645746,
+  "selected_confidence_threshold": 0.35,
+  "validation_loss": 0.6009801749388377,
+  "test_loss": 0.5589957360426585,
+  "test_map50": {
+    "iou_threshold": 0.5,
+    "confidence_threshold": 0.35,
+    "map": 0.9917983876445602,
+    "macro_precision": 0.9978799574872742,
+    "macro_recall": 0.9926693263942734,
+    "macro_f1": 0.9952625387160794,
+    "micro_precision": 0.9979013641133263,
+    "micro_recall": 0.9926931106471816,
+    "negative_images": 242,
+    "negative_false_detections": 0,
+    "negative_false_positive_rate": 0.0,
+    "per_class": {
+      "mug": {
+        "average_precision": 0.9791911394529286,
+        "precision": 0.9943502824858758,
+        "recall": 0.9887640449438202,
+        "f1": 0.9915492957746479,
+        "true_positive": 176,
+        "false_positive": 1,
+        "false_negative": 2,
+        "ground_truth": 178
+      },
+      "apple": {
+        "average_precision": 0.9900990099009901,
+        "precision": 1.0,
+        "recall": 0.9899497487437185,
+        "f1": 0.9949494949494949,
+        "true_positive": 197,
+        "false_positive": 0,
+        "false_negative": 2,
+        "ground_truth": 199
+      },
+      "orange": {
+        "average_precision": 0.9997558870622066,
+        "precision": 0.995049504950495,
+        "recall": 0.995049504950495,
+        "f1": 0.995049504950495,
+        "true_positive": 201,
+        "false_positive": 1,
+        "false_negative": 1,
+        "ground_truth": 202
+      },
+      "can": {
+        "average_precision": 0.9899459018066754,
+        "precision": 1.0,
+        "recall": 0.9895833333333334,
+        "f1": 0.9947643979057591,
+        "true_positive": 190,
+        "false_positive": 0,
+        "false_negative": 2,
+        "ground_truth": 192
+      },
+      "cereal_box": {
+        "average_precision": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "true_positive": 187,
+        "false_positive": 0,
+        "false_negative": 0,
+        "ground_truth": 187
+      }
+    }
+  },
+  "test_map75": {
+    "iou_threshold": 0.75,
+    "confidence_threshold": 0.35,
+    "map": 0.9389526137525124,
+    "macro_precision": 0.9637295112519586,
+    "macro_recall": 0.9586560434038635,
+    "macro_f1": 0.9611808786859504,
+    "micro_precision": 0.9653725078698846,
+    "micro_recall": 0.9603340292275574,
+    "negative_images": 242,
+    "negative_false_detections": 0,
+    "negative_false_positive_rate": 0.0,
+    "per_class": {
+      "mug": {
+        "average_precision": 0.8154048912542932,
+        "precision": 0.8813559322033898,
+        "recall": 0.8764044943820225,
+        "f1": 0.8788732394366198,
+        "true_positive": 156,
+        "false_positive": 21,
+        "false_negative": 22,
+        "ground_truth": 178
+      },
+      "apple": {
+        "average_precision": 0.9801980198019802,
+        "precision": 0.9949238578680203,
+        "recall": 0.9849246231155779,
+        "f1": 0.9898989898989898,
+        "true_positive": 196,
+        "false_positive": 1,
+        "false_negative": 3,
+        "ground_truth": 199
+      },
+      "orange": {
+        "average_precision": 0.9898053654020443,
+        "precision": 0.9851485148514851,
+        "recall": 0.9851485148514851,
+        "f1": 0.9851485148514851,
+        "true_positive": 199,
+        "false_positive": 3,
+        "false_negative": 3,
+        "ground_truth": 202
+      },
+      "can": {
+        "average_precision": 0.9899459018066754,
+        "precision": 1.0,
+        "recall": 0.9895833333333334,
+        "f1": 0.9947643979057591,
+        "true_positive": 190,
+        "false_positive": 0,
+        "false_negative": 2,
+        "ground_truth": 192
+      },
+      "cereal_box": {
+        "average_precision": 0.9194088904975691,
+        "precision": 0.9572192513368984,
+        "recall": 0.9572192513368984,
+        "f1": 0.9572192513368984,
+        "true_positive": 179,
+        "false_positive": 8,
+        "false_negative": 8,
+        "ground_truth": 187
+      }
+    }
+  },
+  "difficulty_metrics": {
+    "easy": {
+      "iou_threshold": 0.5,
+      "confidence_threshold": 0.35,
+      "map": 0.995834755889382,
+      "macro_precision": 0.9965517241379309,
+      "macro_recall": 0.9905179130700482,
+      "macro_f1": 0.993481216752298,
+      "micro_precision": 0.9967741935483871,
+      "micro_recall": 0.9903846153846154,
+      "negative_images": 89,
+      "negative_false_detections": 0,
+      "negative_false_positive_rate": 0.0,
+      "per_class": {
+        "mug": {
+          "average_precision": 0.9801980198019802,
+          "precision": 1.0,
+          "recall": 0.9846153846153847,
+          "f1": 0.9922480620155039,
+          "true_positive": 64,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 65
+        },
+        "apple": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 0.9868421052631579,
+          "f1": 0.9933774834437086,
+          "true_positive": 75,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 76
+        },
+        "orange": {
+          "average_precision": 0.9989757596449298,
+          "precision": 0.9827586206896551,
+          "recall": 1.0,
+          "f1": 0.9913043478260869,
+          "true_positive": 57,
+          "false_positive": 1,
+          "false_negative": 0,
+          "ground_truth": 57
+        },
+        "can": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 0.9811320754716981,
+          "f1": 0.9904761904761905,
+          "true_positive": 52,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 53
+        },
+        "cereal_box": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 61,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 61
+        }
+      }
+    },
+    "medium": {
+      "iou_threshold": 0.5,
+      "confidence_threshold": 0.35,
+      "map": 0.9952923594246217,
+      "macro_precision": 0.9962264150943396,
+      "macro_recall": 0.9937484737484737,
+      "macro_f1": 0.9949448504983389,
+      "micro_precision": 0.9968454258675079,
+      "micro_recall": 0.9937106918238994,
+      "negative_images": 94,
+      "negative_false_detections": 0,
+      "negative_false_positive_rate": 0.0,
+      "per_class": {
+        "mug": {
+          "average_precision": 0.9962637773211281,
+          "precision": 0.9811320754716981,
+          "recall": 1.0,
+          "f1": 0.9904761904761905,
+          "true_positive": 52,
+          "false_positive": 1,
+          "false_negative": 0,
+          "ground_truth": 52
+        },
+        "apple": {
+          "average_precision": 0.9801980198019802,
+          "precision": 1.0,
+          "recall": 0.9841269841269841,
+          "f1": 0.9919999999999999,
+          "true_positive": 62,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 63
+        },
+        "orange": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 0.9846153846153847,
+          "f1": 0.9922480620155039,
+          "true_positive": 64,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 65
+        },
+        "can": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 71,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 71
+        },
+        "cereal_box": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 67,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 67
+        }
+      }
+    },
+    "hard": {
+      "iou_threshold": 0.5,
+      "confidence_threshold": 0.35,
+      "map": 0.9920792079207921,
+      "macro_precision": 1.0,
+      "macro_recall": 0.9937801350048217,
+      "macro_f1": 0.9968656259565349,
+      "micro_precision": 1.0,
+      "micro_recall": 0.9939024390243902,
+      "negative_images": 59,
+      "negative_false_detections": 0,
+      "negative_false_positive_rate": 0.0,
+      "per_class": {
+        "mug": {
+          "average_precision": 0.9801980198019802,
+          "precision": 1.0,
+          "recall": 0.9836065573770492,
+          "f1": 0.9917355371900827,
+          "true_positive": 60,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 61
+        },
+        "apple": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 60,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 60
+        },
+        "orange": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 80,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 80
+        },
+        "can": {
+          "average_precision": 0.9801980198019802,
+          "precision": 1.0,
+          "recall": 0.9852941176470589,
+          "f1": 0.9925925925925926,
+          "true_positive": 67,
+          "false_positive": 0,
+          "false_negative": 1,
+          "ground_truth": 68
+        },
+        "cereal_box": {
+          "average_precision": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "true_positive": 59,
+          "false_positive": 0,
+          "false_negative": 0,
+          "ground_truth": 59
+        }
+      }
+    }
+  },
+  "validation_latency_ms": {
+    "median": 0.6521812499613588,
+    "p95": 0.7932437499675871
+  },
+  "test_latency_ms": {
+    "median": 0.6236687502223504,
+    "p95": 0.7798250001087581
+  },
+  "onnx": {
+    "path": "KitchenObjectNet.onnx",
+    "sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+    "opset": 17,
+    "maximum_output_difference": 4.76837158203125e-06,
+    "providers": [
+      "CPUExecutionProvider"
+    ]
+  },
+  "onnx_cpu_latency": {
+    "provider": "CPUExecutionProvider",
+    "sample_count": 100,
+    "median_ms": 8.071649999692454,
+    "p95_ms": 8.78257000058511
+  },
+  "acceptance": {
+    "map50_at_least_0_90": true,
+    "per_class_precision_recall_at_least_0_85": true,
+    "negative_false_positive_rate_at_most_0_05": true
+  },
+  "artifacts": {
+    "training_log": "training.log",
+    "metrics_log": "metrics.jsonl",
+    "plots": [
+      "plots/confusion_matrix.png",
+      "plots/dataset_distribution.png",
+      "plots/difficulty_metrics.png",
+      "plots/per_class_metrics.png",
+      "plots/perception_180.png",
+      "plots/sample_predictions.png",
+      "plots/threshold_selection.png",
+      "plots/training_curves.png"
+    ],
+    "best_checkpoint": "checkpoints/best.pt",
+    "onnx_model": "KitchenObjectNet.onnx"
+  }
+}

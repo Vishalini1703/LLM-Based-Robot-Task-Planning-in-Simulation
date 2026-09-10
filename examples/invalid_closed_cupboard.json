@@ -1,0 +1,31 @@
+{
+  "plan_id": "example-invalid-001",
+  "goal": "Put the apple in the closed cupboard",
+  "steps": [
+    {
+      "action": "find",
+      "arguments": {
+        "object": "apple"
+      }
+    },
+    {
+      "action": "pick",
+      "arguments": {
+        "object": "apple"
+      }
+    },
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "cupboard"
+      }
+    },
+    {
+      "action": "place",
+      "arguments": {
+        "object": "apple",
+        "location": "cupboard"
+      }
+    }
+  ]
+}

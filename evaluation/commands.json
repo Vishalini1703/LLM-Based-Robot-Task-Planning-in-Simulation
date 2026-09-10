@@ -1,0 +1,355 @@
+{
+  "version": "1.0",
+  "cases": [
+    {
+      "id": "VS01",
+      "category": "valid_single",
+      "command": "Navigate to the shelf.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {"location": "shelf", "held_object": null, "observed_objects": []}
+      }
+    },
+    {
+      "id": "VS02",
+      "category": "valid_single",
+      "command": "Navigate to the basket.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {"location": "basket", "held_object": null, "observed_objects": []}
+      }
+    },
+    {
+      "id": "VS03",
+      "category": "valid_single",
+      "command": "Navigate to the cupboard.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {"location": "cupboard", "held_object": null, "observed_objects": []}
+      }
+    },
+    {
+      "id": "VS04",
+      "category": "valid_single",
+      "command": "Navigate to the table.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {"location": "table", "held_object": null, "observed_objects": []}
+      }
+    },
+    {
+      "id": "VS05",
+      "category": "valid_single",
+      "command": "Find the apple on the table.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "table",
+          "held_object": null,
+          "observed_objects": ["apple"]
+        },
+        "object_locations": {"apple": "table"}
+      }
+    },
+    {
+      "id": "VS06",
+      "category": "valid_single",
+      "command": "Find the fixed kettle on the table.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "table",
+          "held_object": null,
+          "observed_objects": ["fixed_kettle"]
+        },
+        "object_locations": {"fixed_kettle": "table"}
+      }
+    },
+    {
+      "id": "VM01",
+      "category": "valid_multi",
+      "command": "Put the apple in the basket.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "basket",
+          "held_object": null,
+          "observed_objects": ["apple"]
+        },
+        "object_locations": {"apple": "basket"}
+      }
+    },
+    {
+      "id": "VM02",
+      "category": "valid_multi",
+      "command": "Move the apple from the table to the shelf.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "shelf",
+          "held_object": null,
+          "observed_objects": ["apple"]
+        },
+        "object_locations": {"apple": "shelf"}
+      }
+    },
+    {
+      "id": "VM03",
+      "category": "valid_multi",
+      "command": "Put the apple in the cupboard and close the cupboard.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        },
+        "object_locations": {"apple": "cupboard"},
+        "location_open": {"cupboard": false}
+      }
+    },
+    {
+      "id": "VM04",
+      "category": "valid_multi",
+      "command": "Move the mug from the shelf to the table.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "table",
+          "held_object": null,
+          "observed_objects": ["mug"]
+        },
+        "object_locations": {"mug": "table"}
+      }
+    },
+    {
+      "id": "VM05",
+      "category": "valid_multi",
+      "command": "Put the mug in the basket.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "basket",
+          "held_object": null,
+          "observed_objects": ["mug"]
+        },
+        "object_locations": {"mug": "basket"}
+      }
+    },
+    {
+      "id": "VM06",
+      "category": "valid_multi",
+      "command": "Put the mug in the cupboard and close it.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        },
+        "object_locations": {"mug": "cupboard"},
+        "location_open": {"cupboard": false}
+      }
+    },
+    {
+      "id": "VM07",
+      "category": "valid_multi",
+      "command": "Go to the cupboard and open it.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        },
+        "location_open": {"cupboard": true}
+      }
+    },
+    {
+      "id": "VM08",
+      "category": "valid_multi",
+      "command": "Go to the cupboard, open it, and then close it.",
+      "expected_executable": true,
+      "expected_statuses": ["executed"],
+      "expected_issue_codes": [],
+      "expected_state": {
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        },
+        "location_open": {"cupboard": false}
+      }
+    },
+    {
+      "id": "IP01",
+      "category": "invalid_precondition",
+      "command": "Open the table.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["NOT_OPENABLE"],
+      "expected_state": {}
+    },
+    {
+      "id": "IP02",
+      "category": "invalid_precondition",
+      "command": "Close the cupboard even though it is already closed.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["ALREADY_CLOSED"],
+      "expected_state": {}
+    },
+    {
+      "id": "IP03",
+      "category": "invalid_precondition",
+      "command": "Pick up the fixed kettle.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["OBJECT_NOT_PORTABLE"],
+      "expected_state": {}
+    },
+    {
+      "id": "IP04",
+      "category": "invalid_precondition",
+      "command": "Put the apple inside the cupboard but do not open the cupboard.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["CONTAINER_CLOSED"],
+      "expected_state": {}
+    },
+    {
+      "id": "IP05",
+      "category": "invalid_precondition",
+      "command": "Place the mug in the basket without picking it up.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["OBJECT_NOT_HELD"],
+      "expected_state": {}
+    },
+    {
+      "id": "IP06",
+      "category": "invalid_precondition",
+      "command": "Hold the apple and mug at the same time without putting either down.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["HAND_OCCUPIED"],
+      "expected_state": {}
+    },
+    {
+      "id": "UN01",
+      "category": "unsupported",
+      "command": "Cook the apple.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["UNKNOWN_ACTION"],
+      "expected_state": {}
+    },
+    {
+      "id": "UN02",
+      "category": "unsupported",
+      "command": "Cut the apple with a knife.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["UNKNOWN_ACTION", "UNKNOWN_OBJECT"],
+      "expected_state": {}
+    },
+    {
+      "id": "UN03",
+      "category": "unsupported",
+      "command": "Pour water from the mug.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["UNKNOWN_ACTION"],
+      "expected_state": {}
+    },
+    {
+      "id": "UN04",
+      "category": "unsupported",
+      "command": "Throw the apple across the kitchen.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["UNKNOWN_ACTION"],
+      "expected_state": {}
+    },
+    {
+      "id": "UN05",
+      "category": "unsupported",
+      "command": "Eat the apple.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": ["UNKNOWN_ACTION"],
+      "expected_state": {}
+    },
+    {
+      "id": "AM01",
+      "category": "ambiguous",
+      "command": "Move it there.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": [],
+      "expected_state": {}
+    },
+    {
+      "id": "AM02",
+      "category": "ambiguous",
+      "command": "Put the item away.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": [],
+      "expected_state": {}
+    },
+    {
+      "id": "AM03",
+      "category": "ambiguous",
+      "command": "Bring the fruit to the container.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": [],
+      "expected_state": {}
+    },
+    {
+      "id": "AM04",
+      "category": "ambiguous",
+      "command": "Put the mug somewhere.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": [],
+      "expected_state": {}
+    },
+    {
+      "id": "AM05",
+      "category": "ambiguous",
+      "command": "Tidy the kitchen.",
+      "expected_executable": false,
+      "expected_statuses": ["planner_rejected", "validation_rejected"],
+      "expected_issue_codes": [],
+      "expected_state": {}
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robot-task-planner"
+version = "0.3.0"
+description = "Deterministic world model and validation boundary for LLM-generated robot task plans"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Academic use" }
+authors = [{ name = "Vishalini Kumarasamy Maragatham" }]
+dependencies = [
+  "numpy>=1.26,<3",
+  "onnxruntime>=1.19,<2",
+  "Pillow>=10,<12",
+]
+
+[project.optional-dependencies]
+cnn-training = [
+  "torch>=2.4,<3",
+  "onnx>=1.16,<2",
+  "matplotlib>=3.9,<4",
+]
+
+[project.scripts]
+robot-plan = "robot_planner.cli:main"
+robot-task = "robot_planner.app_cli:main"
+robot-evaluate = "robot_planner.evaluation_cli:main"
+robot-cnn = "robot_planner.cnn_cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

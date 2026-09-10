@@ -1,0 +1,10 @@
+{
+  "plan_id": "example-orange-to-basket",
+  "goal": "Put the orange in the basket",
+  "steps": [
+    {"action": "find", "arguments": {"object": "orange"}},
+    {"action": "pick", "arguments": {"object": "orange"}},
+    {"action": "navigate", "arguments": {"location": "basket"}},
+    {"action": "place", "arguments": {"object": "orange", "location": "basket"}}
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "protocol": "180 held-out Webots-rendered seeded perception episodes",
+  "episodes": 180,
+  "passed": 173,
+  "failed": 7,
+  "confidence_threshold": 0.35,
+  "model_sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+  "duration_seconds": 2.899234799999249,
+  "latency_ms": {
+    "median": 11.380400001144153,
+    "p95": 12.688630000411647
+  },
+  "by_class": {
+    "mug": {
+      "episodes": 30,
+      "passed": 28,
+      "accuracy": 0.9333333333333333
+    },
+    "apple": {
+      "episodes": 30,
+      "passed": 28,
+      "accuracy": 0.9333333333333333
+    },
+    "orange": {
+      "episodes": 30,
+      "passed": 29,
+      "accuracy": 0.9666666666666667
+    },
+    "can": {
+      "episodes": 30,
+      "passed": 28,
+      "accuracy": 0.9333333333333333
+    },
+    "cereal_box": {
+      "episodes": 30,
+      "passed": 30,
+      "accuracy": 1.0
+    },
+    "negative": {
+      "episodes": 30,
+      "passed": 30,
+      "accuracy": 1.0
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "episodes": 60,
+      "passed": 57,
+      "accuracy": 0.95
+    },
+    "medium": {
+      "episodes": 60,
+      "passed": 58,
+      "accuracy": 0.9666666666666667
+    },
+    "hard": {
+      "episodes": 60,
+      "passed": 58,
+      "accuracy": 0.9666666666666667
+    }
+  },
+  "acceptance": {
+    "each_target_class_accuracy_at_least_0_85": true,
+    "negative_specificity_at_least_0_95": true
+  },
+  "prediction_log": "logs/perception_180_predictions.jsonl"
+}

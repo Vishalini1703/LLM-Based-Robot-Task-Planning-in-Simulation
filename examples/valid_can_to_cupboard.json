@@ -1,0 +1,13 @@
+{
+  "plan_id": "example-can-to-cupboard",
+  "goal": "Put the can in the cupboard and close it",
+  "steps": [
+    {"action": "navigate", "arguments": {"location": "shelf"}},
+    {"action": "find", "arguments": {"object": "can"}},
+    {"action": "pick", "arguments": {"object": "can"}},
+    {"action": "navigate", "arguments": {"location": "cupboard"}},
+    {"action": "open", "arguments": {"container": "cupboard"}},
+    {"action": "place", "arguments": {"object": "can", "location": "cupboard"}},
+    {"action": "close", "arguments": {"container": "cupboard"}}
+  ]
+}

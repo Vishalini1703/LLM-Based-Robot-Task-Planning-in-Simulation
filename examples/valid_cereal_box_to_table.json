@@ -1,0 +1,11 @@
+{
+  "plan_id": "example-cereal-box-to-table",
+  "goal": "Move the cereal box from the shelf to the table",
+  "steps": [
+    {"action": "navigate", "arguments": {"location": "shelf"}},
+    {"action": "find", "arguments": {"object": "cereal_box"}},
+    {"action": "pick", "arguments": {"object": "cereal_box"}},
+    {"action": "navigate", "arguments": {"location": "table"}},
+    {"action": "place", "arguments": {"object": "cereal_box", "location": "table"}}
+  ]
+}

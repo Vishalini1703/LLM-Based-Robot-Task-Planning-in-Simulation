@@ -1,0 +1,65 @@
+{
+  "locations": [
+    {
+      "id": "table",
+      "kind": "surface",
+      "openable": false,
+      "is_open": true
+    },
+    {
+      "id": "shelf",
+      "kind": "surface",
+      "openable": false,
+      "is_open": true
+    },
+    {
+      "id": "basket",
+      "kind": "container",
+      "openable": false,
+      "is_open": true
+    },
+    {
+      "id": "cupboard",
+      "kind": "container",
+      "openable": true,
+      "is_open": false
+    }
+  ],
+  "objects": [
+    {
+      "id": "apple",
+      "location": "table",
+      "portable": true
+    },
+    {
+      "id": "mug",
+      "location": "shelf",
+      "portable": true
+    },
+    {
+      "id": "orange",
+      "location": "table",
+      "portable": true
+    },
+    {
+      "id": "can",
+      "location": "shelf",
+      "portable": true
+    },
+    {
+      "id": "cereal_box",
+      "location": "shelf",
+      "portable": true
+    },
+    {
+      "id": "fixed_kettle",
+      "location": "table",
+      "portable": false
+    }
+  ],
+  "robot": {
+    "location": "table",
+    "held_object": null,
+    "observed_objects": []
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "purpose": "Portable CPU inference smoke test; not model selection data",
+  "model_sha256": "02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96",
+  "fixtures": [
+    {
+      "file": "mug.jpg",
+      "expected_label": "mug",
+      "source_record_id": 17,
+      "source_seed": 2026080800017,
+      "image_sha256": "0b1742b815ced378a4bfb75df8e52b3c519bcad248a7615b70e03bc307d62e44"
+    },
+    {
+      "file": "apple.jpg",
+      "expected_label": "apple",
+      "source_record_id": 49,
+      "source_seed": 2026080800049,
+      "image_sha256": "e2bce62c7c57c2dce49b303e23adbd13ab60c527cd5cde9c0d86f210bcc26705"
+    },
+    {
+      "file": "orange.jpg",
+      "expected_label": "orange",
+      "source_record_id": 107,
+      "source_seed": 2026080800107,
+      "image_sha256": "ea96686a9f7f53634dd756e9d1811f8125345b70a86f3fc29482e13ff1bcd159"
+    },
+    {
+      "file": "can.jpg",
+      "expected_label": "can",
+      "source_record_id": 227,
+      "source_seed": 2026080800227,
+      "image_sha256": "b43127f99b5048ba85d9bc3e828172fb74607c66eb12cbf96a47327869fecc46"
+    },
+    {
+      "file": "cereal_box.jpg",
+      "expected_label": "cereal_box",
+      "source_record_id": 145,
+      "source_seed": 2026080800145,
+      "image_sha256": "69b669fc722bd5d946fab7d5f2d69a1f515368e91d60b9dd69a0a51e6ab5a620"
+    },
+    {
+      "file": "negative.jpg",
+      "expected_label": null,
+      "source_record_id": 22,
+      "source_seed": 2026080800022,
+      "image_sha256": "60e20ddc1b807c59a7be484fbaa42a4a8cfdadc20bb4e7e138206112b28de304"
+    }
+  ]
+}
