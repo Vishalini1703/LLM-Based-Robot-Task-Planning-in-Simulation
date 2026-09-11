@@ -1,5 +1,7 @@
 # LLM-Based Robot Task Planning Prototype
 
+For assessment from a GitHub download, start with [the assessor guide](docs/assessor-guide.md), including the verification commands, evidence locations, and reproduction limitations.
+
 This repository implements a validated natural-language robot task-planning pipeline. Groq-hosted Llama 3.3 converts a kitchen command into a structured plan, the deterministic Python boundary verifies every step, and an execution backend runs the plan either in memory or in an adapted copy of Webots R2025a's default kitchen.
 
 ## Implemented scope

@@ -1,0 +1,31 @@
+{
+  "plan_id": "groq-7f4b9029-9349-4505-80ce-3eb8266f345a",
+  "goal": "Put the apple in the basket",
+  "steps": [
+    {
+      "action": "find",
+      "arguments": {
+        "object": "apple"
+      }
+    },
+    {
+      "action": "pick",
+      "arguments": {
+        "object": "apple"
+      }
+    },
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "basket"
+      }
+    },
+    {
+      "action": "place",
+      "arguments": {
+        "object": "apple",
+        "location": "basket"
+      }
+    }
+  ]
+}

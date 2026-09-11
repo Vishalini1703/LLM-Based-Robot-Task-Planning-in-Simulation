@@ -1,0 +1,43 @@
+{
+  "plan_id": "groq-716e01ef-abf0-43da-8483-e9a2f51fa913",
+  "goal": "Put the mug in the cupboard",
+  "steps": [
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "shelf"
+      }
+    },
+    {
+      "action": "find",
+      "arguments": {
+        "object": "mug"
+      }
+    },
+    {
+      "action": "pick",
+      "arguments": {
+        "object": "mug"
+      }
+    },
+    {
+      "action": "navigate",
+      "arguments": {
+        "location": "cupboard"
+      }
+    },
+    {
+      "action": "open",
+      "arguments": {
+        "container": "cupboard"
+      }
+    },
+    {
+      "action": "place",
+      "arguments": {
+        "object": "mug",
+        "location": "cupboard"
+      }
+    }
+  ]
+}
