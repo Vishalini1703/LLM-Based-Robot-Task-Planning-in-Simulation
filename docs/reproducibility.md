@@ -1,7 +1,5 @@
 # Reproducibility Guide
 
-For the contents and verified limitations of the GitHub download, see the [assessor guide](assessor-guide.md). In particular, historical evaluation hashes differ from the current code; use a separate freeze and output directory for a new experiment.
-
 ## Clean setup
 
 Install Python 3.10 or newer, create a virtual environment, install with `python -m pip install -e .`, and place a Groq key in an untracked `.env` file as `GROQ_AI_KEY` or `GROQ_API_KEY`. No client path or GPU model is hard-coded.
@@ -41,9 +39,9 @@ The accepted ONNX SHA-256 is
 `02d0d5496d183ee006147354cf0e76159dd090e4b3e5672fd04a1a5d27251a96`.
 `robot-cnn verify` checks this hash, provenance, CPU execution provider, five
 positive fixtures, one negative fixture, the frozen 180-scene report, eight
-plots, and the compact 25-run Webots summary. The original 8,000 training images,
-checkpoints, and full CNN logs are not included in this repository or the supplied
-local project.
+plots, and the compact 25-run Webots summary. The full local artifact directory
+retains all 8,000 images, checkpoints, failed attempts, logs, screenshots, and
+plots.
 
 ## Recorded environment
 

@@ -123,7 +123,7 @@ class WebotsExecutorTests(unittest.TestCase):
             self.assertIn("--no-rendering", captured["command"])
             self.assertIn("--batch", captured["command"])
             self.assertEqual("0", captured["env"]["ROBOT_TASK_KEEP_OPEN"])
-            self.assertEqual(webots_home.resolve(), Path(captured["env"]["WEBOTS_HOME"]).resolve())
+            self.assertEqual(str(webots_home), captured["env"]["WEBOTS_HOME"])
             written_plan = json.loads(
                 Path(captured["env"]["ROBOT_TASK_PLAN_FILE"]).read_text(encoding="utf-8")
             )
