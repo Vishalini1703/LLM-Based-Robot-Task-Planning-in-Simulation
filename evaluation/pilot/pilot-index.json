@@ -1,0 +1,53 @@
+{
+  "pilot": true,
+  "included_in_final_dataset": false,
+  "completed_at": "2026-08-05T21:41:46.927739+00:00",
+  "preflight": {
+    "returncode": 0,
+    "output_tail": "ct (test_llm.GroqPlannerTests.test_parses_ready_plan_and_sends_world_contract) ... ok\ntest_rejects_invalid_envelope (test_llm.GroqPlannerTests.test_rejects_invalid_envelope) ... ok\ntest_retries_a_plan_rejected_by_local_validator (test_llm.GroqPlannerTests.test_retries_a_plan_rejected_by_local_validator) ... ok\ntest_executes_ready_valid_plan (test_pipeline.PipelineTests.test_executes_ready_valid_plan) ... ok\ntest_stops_on_planner_rejection (test_pipeline.PipelineTests.test_stops_on_planner_rejection) ... ok\ntest_stops_on_validator_rejection (test_pipeline.PipelineTests.test_stops_on_validator_rejection) ... ok\ntest_loads_quoted_values_and_existing_alias (test_settings.SettingsTests.test_loads_quoted_values_and_existing_alias) ... ok\ntest_process_environment_takes_precedence (test_settings.SettingsTests.test_process_environment_takes_precedence) ... ok\ntest_rejects_missing_key (test_settings.SettingsTests.test_rejects_missing_key) ... ok\ntest_find_records_observation_without_moving_object (test_validator.ValidatorTests.test_find_records_observation_without_moving_object) ... ok\ntest_pick_requires_find (test_validator.ValidatorTests.test_pick_requires_find) ... ok\ntest_rejects_hallucinated_action (test_validator.ValidatorTests.test_rejects_hallucinated_action) ... ok\ntest_rejects_hallucinated_object (test_validator.ValidatorTests.test_rejects_hallucinated_object) ... ok\ntest_rejects_missing_required_plan_field (test_validator.ValidatorTests.test_rejects_missing_required_plan_field) ... ok\ntest_rejects_nonportable_object (test_validator.ValidatorTests.test_rejects_nonportable_object) ... ok\ntest_rejects_open_from_wrong_location (test_validator.ValidatorTests.test_rejects_open_from_wrong_location) ... ok\ntest_rejects_opening_surface (test_validator.ValidatorTests.test_rejects_opening_surface) ... ok\ntest_rejects_pick_when_robot_is_elsewhere (test_validator.ValidatorTests.test_rejects_pick_when_robot_is_elsewhere) ... ok\ntest_rejects_place_in_closed_container (test_validator.ValidatorTests.test_rejects_place_in_closed_container) ... ok\ntest_rejects_second_pick_when_hand_is_occupied (test_validator.ValidatorTests.test_rejects_second_pick_when_hand_is_occupied) ... ok\ntest_rejects_unexpected_plan_field (test_validator.ValidatorTests.test_rejects_unexpected_plan_field) ... ok\ntest_rejects_wrong_action_arguments (test_validator.ValidatorTests.test_rejects_wrong_action_arguments) ... ok\ntest_valid_open_place_close_sequence (test_validator.ValidatorTests.test_valid_open_place_close_sequence) ... ok\ntest_valid_pick_navigate_place_sequence (test_validator.ValidatorTests.test_valid_pick_navigate_place_sequence) ... ok\ntest_discovers_webots_from_webots_home (test_webots_executor.WebotsExecutorTests.test_discovers_webots_from_webots_home) ... ok\ntest_docker_runtime_uses_xvfb_and_project_mount (test_webots_executor.WebotsExecutorTests.test_docker_runtime_uses_xvfb_and_project_mount) ... ok\ntest_launcher_passes_validated_plan_and_required_flags (test_webots_executor.WebotsExecutorTests.test_launcher_passes_validated_plan_and_required_flags) ... ok\ntest_missing_webots_has_portable_configuration_message (test_webots_executor.WebotsExecutorTests.test_missing_webots_has_portable_configuration_message) ... ok\ntest_project_world_contains_required_task_nodes (test_webots_executor.WebotsExecutorTests.test_project_world_contains_required_task_nodes) ... ok\ntest_clone_is_independent (test_world.WorldLoadingTests.test_clone_is_independent) ... ok\ntest_loads_consistent_world (test_world.WorldLoadingTests.test_loads_consistent_world) ... ok\ntest_rejects_duplicate_location (test_world.WorldLoadingTests.test_rejects_duplicate_location) ... ok\ntest_rejects_unheld_unlocated_object (test_world.WorldLoadingTests.test_rejects_unheld_unlocated_object) ... ok\ntest_rejects_unknown_object_location (test_world.WorldLoadingTests.test_rejects_unknown_object_location) ... ok\n\n----------------------------------------------------------------------\nRan 43 tests in 0.057s\n\nOK\n"
+  },
+  "trial_count": 5,
+  "all_classifications_correct": true,
+  "trials": [
+    {
+      "trial_id": "pilot-VS01",
+      "case_id": "VS01",
+      "category": "valid_single",
+      "status": "executed",
+      "classification_correct": true,
+      "path": "evaluation\\pilot\\trials\\pilot-VS01.json"
+    },
+    {
+      "trial_id": "pilot-VM01",
+      "case_id": "VM01",
+      "category": "valid_multi",
+      "status": "executed",
+      "classification_correct": true,
+      "path": "evaluation\\pilot\\trials\\pilot-VM01.json"
+    },
+    {
+      "trial_id": "pilot-IP01",
+      "case_id": "IP01",
+      "category": "invalid_precondition",
+      "status": "planner_rejected",
+      "classification_correct": true,
+      "path": "evaluation\\pilot\\trials\\pilot-IP01.json"
+    },
+    {
+      "trial_id": "pilot-UN01",
+      "case_id": "UN01",
+      "category": "unsupported",
+      "status": "planner_rejected",
+      "classification_correct": true,
+      "path": "evaluation\\pilot\\trials\\pilot-UN01.json"
+    },
+    {
+      "trial_id": "pilot-AM01",
+      "case_id": "AM01",
+      "category": "ambiguous",
+      "status": "planner_rejected",
+      "classification_correct": true,
+      "path": "evaluation\\pilot\\trials\\pilot-AM01.json"
+    }
+  ]
+}

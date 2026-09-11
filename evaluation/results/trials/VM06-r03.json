@@ -1,0 +1,1765 @@
+{
+  "trial_id": "VM06-r03",
+  "case": {
+    "id": "VM06",
+    "category": "valid_multi",
+    "command": "Put the mug in the cupboard and close it.",
+    "expected_executable": true,
+    "expected_statuses": [
+      "executed"
+    ],
+    "expected_issue_codes": [],
+    "expected_state": {
+      "robot": {
+        "location": "cupboard",
+        "held_object": null,
+        "observed_objects": []
+      },
+      "object_locations": {
+        "mug": "cupboard"
+      },
+      "location_open": {
+        "cupboard": false
+      }
+    }
+  },
+  "repetition": 3,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "6e34c428-4ed3-4b84-81ec-d68021f0f25f",
+    "command": "Put the mug in the cupboard and close it.",
+    "created_at": "2026-08-05T21:42:27.366664+00:00",
+    "status": "executed",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 581.453,
+    "planner": {
+      "status": "ready",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 581.101,
+      "raw_response": "{\n  \"status\": \"ready\",\n   \"plan\": {\n      \"plan_id\": \"groq-a1a7d844-cf1c-4a9f-be71-e7b883b17ef9\",\n      \"goal\": \"Put the mug in the cupboard and close it\",\n      \"steps\": [\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"shelf\"\n            }\n         },\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"mug\"\n            }\n         },\n         {\n            \"action\": \"pick\",\n            \"arguments\": {\n               \"object\": \"mug\"\n            }\n         },\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"open\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"place\",\n            \"arguments\": {\n               \"object\": \"mug\",\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"close\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         }\n      ]\n   },\n   \"message\": null\n}",
+      "plan": {
+        "plan_id": "groq-a1a7d844-cf1c-4a9f-be71-e7b883b17ef9",
+        "goal": "Put the mug in the cupboard and close it",
+        "steps": [
+          {
+            "action": "navigate",
+            "arguments": {
+              "location": "shelf"
+            }
+          },
+          {
+            "action": "find",
+            "arguments": {
+              "object": "mug"
+            }
+          },
+          {
+            "action": "pick",
+            "arguments": {
+              "object": "mug"
+            }
+          },
+          {
+            "action": "navigate",
+            "arguments": {
+              "location": "cupboard"
+            }
+          },
+          {
+            "action": "open",
+            "arguments": {
+              "container": "cupboard"
+            }
+          },
+          {
+            "action": "place",
+            "arguments": {
+              "object": "mug",
+              "location": "cupboard"
+            }
+          },
+          {
+            "action": "close",
+            "arguments": {
+              "container": "cupboard"
+            }
+          }
+        ]
+      },
+      "message": null,
+      "usage": {
+        "prompt_tokens": 637,
+        "completion_tokens": 267,
+        "total_tokens": 904
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 581.101,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 581.101,
+          "status": "accepted",
+          "raw_response": "{\n  \"status\": \"ready\",\n   \"plan\": {\n      \"plan_id\": \"groq-a1a7d844-cf1c-4a9f-be71-e7b883b17ef9\",\n      \"goal\": \"Put the mug in the cupboard and close it\",\n      \"steps\": [\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"shelf\"\n            }\n         },\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"mug\"\n            }\n         },\n         {\n            \"action\": \"pick\",\n            \"arguments\": {\n               \"object\": \"mug\"\n            }\n         },\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"open\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"place\",\n            \"arguments\": {\n               \"object\": \"mug\",\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"close\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         }\n      ]\n   },\n   \"message\": null\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": {
+      "valid": true,
+      "plan_id": "groq-a1a7d844-cf1c-4a9f-be71-e7b883b17ef9",
+      "steps_checked": 7,
+      "issues": [],
+      "predicted_final_state": {
+        "locations": [
+          {
+            "id": "basket",
+            "kind": "container",
+            "openable": false,
+            "is_open": true
+          },
+          {
+            "id": "cupboard",
+            "kind": "container",
+            "openable": true,
+            "is_open": false
+          },
+          {
+            "id": "shelf",
+            "kind": "surface",
+            "openable": false,
+            "is_open": true
+          },
+          {
+            "id": "table",
+            "kind": "surface",
+            "openable": false,
+            "is_open": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "apple",
+            "location": "table",
+            "portable": true
+          },
+          {
+            "id": "fixed_kettle",
+            "location": "table",
+            "portable": false
+          },
+          {
+            "id": "mug",
+            "location": "cupboard",
+            "portable": true
+          }
+        ],
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        }
+      }
+    },
+    "execution": {
+      "run_id": "333803c0-43cc-4bbc-aeb6-1b0efcc48b7f",
+      "plan_id": "groq-a1a7d844-cf1c-4a9f-be71-e7b883b17ef9",
+      "started_at": "2026-08-05T21:42:27.947946+00:00",
+      "duration_ms": 0.096,
+      "steps": [
+        {
+          "index": 0,
+          "action": "navigate",
+          "arguments": {
+            "location": "shelf"
+          },
+          "duration_ms": 0.001,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "table",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 1,
+          "action": "find",
+          "arguments": {
+            "object": "mug"
+          },
+          "duration_ms": 0.001,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 2,
+          "action": "pick",
+          "arguments": {
+            "object": "mug"
+          },
+          "duration_ms": 0.001,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "shelf",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 3,
+          "action": "navigate",
+          "arguments": {
+            "location": "cupboard"
+          },
+          "duration_ms": 0.001,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "shelf",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 4,
+          "action": "open",
+          "arguments": {
+            "container": "cupboard"
+          },
+          "duration_ms": 0.001,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 5,
+          "action": "place",
+          "arguments": {
+            "object": "mug",
+            "location": "cupboard"
+          },
+          "duration_ms": 0.002,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": null,
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": "mug",
+              "observed_objects": []
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "outcome_verified": true
+        },
+        {
+          "index": 6,
+          "action": "close",
+          "arguments": {
+            "container": "cupboard"
+          },
+          "duration_ms": 0.002,
+          "state_before": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": true
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": [
+                "mug"
+              ]
+            }
+          },
+          "state_after": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "expected_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "observed_state": {
+            "locations": [
+              {
+                "id": "basket",
+                "kind": "container",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "cupboard",
+                "kind": "container",
+                "openable": true,
+                "is_open": false
+              },
+              {
+                "id": "shelf",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              },
+              {
+                "id": "table",
+                "kind": "surface",
+                "openable": false,
+                "is_open": true
+              }
+            ],
+            "objects": [
+              {
+                "id": "apple",
+                "location": "table",
+                "portable": true
+              },
+              {
+                "id": "fixed_kettle",
+                "location": "table",
+                "portable": false
+              },
+              {
+                "id": "mug",
+                "location": "cupboard",
+                "portable": true
+              }
+            ],
+            "robot": {
+              "location": "cupboard",
+              "held_object": null,
+              "observed_objects": []
+            }
+          },
+          "outcome_verified": true
+        }
+      ],
+      "final_state": {
+        "locations": [
+          {
+            "id": "basket",
+            "kind": "container",
+            "openable": false,
+            "is_open": true
+          },
+          {
+            "id": "cupboard",
+            "kind": "container",
+            "openable": true,
+            "is_open": false
+          },
+          {
+            "id": "shelf",
+            "kind": "surface",
+            "openable": false,
+            "is_open": true
+          },
+          {
+            "id": "table",
+            "kind": "surface",
+            "openable": false,
+            "is_open": true
+          }
+        ],
+        "objects": [
+          {
+            "id": "apple",
+            "location": "table",
+            "portable": true
+          },
+          {
+            "id": "fixed_kettle",
+            "location": "table",
+            "portable": false
+          },
+          {
+            "id": "mug",
+            "location": "cupboard",
+            "portable": true
+          }
+        ],
+        "robot": {
+          "location": "cupboard",
+          "held_object": null,
+          "observed_objects": []
+        }
+      }
+    },
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "executed",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": true,
+    "correct_rejection": false,
+    "classification_correct": true
+  }
+}

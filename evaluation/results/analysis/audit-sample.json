@@ -1,0 +1,212 @@
+[
+  {
+    "trial_id": "AM01-r01",
+    "category": "ambiguous",
+    "source_file": "trials/AM01-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP01-r01",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP01-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN01-r01",
+    "category": "unsupported",
+    "source_file": "trials/UN01-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM01-r01",
+    "category": "valid_multi",
+    "source_file": "trials/VM01-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS01-r01",
+    "category": "valid_single",
+    "source_file": "trials/VS01-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "AM01-r02",
+    "category": "ambiguous",
+    "source_file": "trials/AM01-r02.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP01-r02",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP01-r02.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN01-r02",
+    "category": "unsupported",
+    "source_file": "trials/UN01-r02.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM01-r02",
+    "category": "valid_multi",
+    "source_file": "trials/VM01-r02.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS01-r02",
+    "category": "valid_single",
+    "source_file": "trials/VS01-r02.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "AM01-r03",
+    "category": "ambiguous",
+    "source_file": "trials/AM01-r03.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP01-r03",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP01-r03.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN01-r03",
+    "category": "unsupported",
+    "source_file": "trials/UN01-r03.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM01-r03",
+    "category": "valid_multi",
+    "source_file": "trials/VM01-r03.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS01-r03",
+    "category": "valid_single",
+    "source_file": "trials/VS01-r03.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "AM01-r04",
+    "category": "ambiguous",
+    "source_file": "trials/AM01-r04.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP01-r04",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP01-r04.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN01-r04",
+    "category": "unsupported",
+    "source_file": "trials/UN01-r04.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM01-r04",
+    "category": "valid_multi",
+    "source_file": "trials/VM01-r04.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS01-r04",
+    "category": "valid_single",
+    "source_file": "trials/VS01-r04.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "AM01-r05",
+    "category": "ambiguous",
+    "source_file": "trials/AM01-r05.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP01-r05",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP01-r05.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN01-r05",
+    "category": "unsupported",
+    "source_file": "trials/UN01-r05.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM01-r05",
+    "category": "valid_multi",
+    "source_file": "trials/VM01-r05.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS01-r05",
+    "category": "valid_single",
+    "source_file": "trials/VS01-r05.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "AM02-r01",
+    "category": "ambiguous",
+    "source_file": "trials/AM02-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "IP02-r01",
+    "category": "invalid_precondition",
+    "source_file": "trials/IP02-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "UN02-r01",
+    "category": "unsupported",
+    "source_file": "trials/UN02-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VM02-r01",
+    "category": "valid_multi",
+    "source_file": "trials/VM02-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  },
+  {
+    "trial_id": "VS02-r01",
+    "category": "valid_single",
+    "source_file": "trials/VS02-r01.json",
+    "audit_status": "pending_manual_review",
+    "reviewer_notes": ""
+  }
+]

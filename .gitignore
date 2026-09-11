@@ -8,5 +8,4 @@ __pycache__/
 build/
 dist/
 submission/
-logs/
 webots/runtime/*.json

@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-08-05T21:43:03.808492+00:00",
+  "trial_count": 150,
+  "structured_response": {
+    "numerator": 150,
+    "denominator": 150,
+    "percent": 100.0
+  },
+  "plan_validity": {
+    "numerator": 64,
+    "denominator": 64,
+    "percent": 100.0
+  },
+  "task_success": {
+    "numerator": 63,
+    "denominator": 70,
+    "percent": 90.0
+  },
+  "correct_rejection": {
+    "numerator": 79,
+    "denominator": 80,
+    "percent": 98.75
+  },
+  "invalid_step": {
+    "numerator": 0,
+    "denominator": 187,
+    "percent": 0.0
+  },
+  "hallucination": {
+    "numerator": 0,
+    "denominator": 150,
+    "percent": 0.0
+  },
+  "execution_error": {
+    "numerator": 0,
+    "denominator": 64,
+    "percent": 0.0
+  },
+  "correction_attempt": {
+    "numerator": 8,
+    "denominator": 150,
+    "percent": 5.333
+  },
+  "correction_success": {
+    "numerator": 3,
+    "denominator": 8,
+    "percent": 37.5
+  },
+  "model_latency_ms": {
+    "count": 150,
+    "mean": 352.549,
+    "median": 299.125,
+    "standard_deviation": 161.009,
+    "minimum": 211.882,
+    "maximum": 994.772,
+    "p95": 801.495
+  },
+  "end_to_end_latency_ms": {
+    "count": 150,
+    "mean": 352.767,
+    "median": 299.352,
+    "standard_deviation": 161.068,
+    "minimum": 211.995,
+    "maximum": 995.156,
+    "p95": 801.827
+  },
+  "category_breakdown": {
+    "ambiguous": {
+      "trials": 25,
+      "classification_correct": 24,
+      "task_success": 0,
+      "classification_accuracy_percent": 96.0
+    },
+    "invalid_precondition": {
+      "trials": 30,
+      "classification_correct": 30,
+      "task_success": 0,
+      "classification_accuracy_percent": 100.0
+    },
+    "unsupported": {
+      "trials": 25,
+      "classification_correct": 25,
+      "task_success": 0,
+      "classification_accuracy_percent": 100.0
+    },
+    "valid_multi": {
+      "trials": 40,
+      "classification_correct": 36,
+      "task_success": 36,
+      "classification_accuracy_percent": 90.0
+    },
+    "valid_single": {
+      "trials": 30,
+      "classification_correct": 27,
+      "task_success": 27,
+      "classification_accuracy_percent": 90.0
+    }
+  },
+  "failure_taxonomy": {
+    "none": 142,
+    "incorrect_acceptance": 1,
+    "incorrect_rejection": 7
+  }
+}

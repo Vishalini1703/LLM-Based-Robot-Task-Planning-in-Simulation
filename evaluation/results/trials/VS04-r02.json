@@ -1,0 +1,119 @@
+{
+  "trial_id": "VS04-r02",
+  "case": {
+    "id": "VS04",
+    "category": "valid_single",
+    "command": "Navigate to the table.",
+    "expected_executable": true,
+    "expected_statuses": [
+      "executed"
+    ],
+    "expected_issue_codes": [],
+    "expected_state": {
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    }
+  },
+  "repetition": 2,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "01a1c54c-2092-40ac-a118-5ffc10bd0f16",
+    "command": "Navigate to the table.",
+    "created_at": "2026-08-05T21:42:10.484054+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 230.501,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 230.345,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"The robot is already at the table.\"\n}",
+      "plan": null,
+      "message": "The robot is already at the table.",
+      "usage": {
+        "prompt_tokens": 632,
+        "completion_tokens": 28,
+        "total_tokens": 660
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 230.345,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 230.345,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"The robot is already at the table.\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": false,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": false,
+    "classification_correct": false
+  }
+}

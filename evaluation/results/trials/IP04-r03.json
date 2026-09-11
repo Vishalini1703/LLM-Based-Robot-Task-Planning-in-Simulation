@@ -1,0 +1,116 @@
+{
+  "trial_id": "IP04-r03",
+  "case": {
+    "id": "IP04",
+    "category": "invalid_precondition",
+    "command": "Put the apple inside the cupboard but do not open the cupboard.",
+    "expected_executable": false,
+    "expected_statuses": [
+      "planner_rejected",
+      "validation_rejected"
+    ],
+    "expected_issue_codes": [
+      "CONTAINER_CLOSED"
+    ],
+    "expected_state": {}
+  },
+  "repetition": 3,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "c11a2d00-8fc4-4c6f-9b1d-02da1690e7fe",
+    "command": "Put the apple inside the cupboard but do not open the cupboard.",
+    "created_at": "2026-08-05T21:42:30.106776+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 251.449,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 251.334,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot put object in closed container without opening it first.\"\n}",
+      "plan": null,
+      "message": "Cannot put object in closed container without opening it first.",
+      "usage": {
+        "prompt_tokens": 636,
+        "completion_tokens": 31,
+        "total_tokens": 667
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 251.334,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 251.334,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot put object in closed container without opening it first.\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": true,
+    "classification_correct": true
+  }
+}

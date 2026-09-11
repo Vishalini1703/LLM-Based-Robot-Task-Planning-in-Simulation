@@ -1,0 +1,116 @@
+{
+  "trial_id": "IP03-r04",
+  "case": {
+    "id": "IP03",
+    "category": "invalid_precondition",
+    "command": "Pick up the fixed kettle.",
+    "expected_executable": false,
+    "expected_statuses": [
+      "planner_rejected",
+      "validation_rejected"
+    ],
+    "expected_issue_codes": [
+      "OBJECT_NOT_PORTABLE"
+    ],
+    "expected_state": {}
+  },
+  "repetition": 4,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "254ffc38-e069-49d2-98a4-02d52181eb67",
+    "command": "Pick up the fixed kettle.",
+    "created_at": "2026-08-05T21:42:42.668641+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 222.986,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 222.829,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot pick up non-portable object\"\n}",
+      "plan": null,
+      "message": "Cannot pick up non-portable object",
+      "usage": {
+        "prompt_tokens": 625,
+        "completion_tokens": 28,
+        "total_tokens": 653
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 222.829,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 222.829,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot pick up non-portable object\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": true,
+    "classification_correct": true
+  }
+}

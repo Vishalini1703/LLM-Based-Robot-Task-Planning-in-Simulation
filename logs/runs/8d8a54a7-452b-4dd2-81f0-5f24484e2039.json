@@ -1,0 +1,209 @@
+{
+  "run_id": "8d8a54a7-452b-4dd2-81f0-5f24484e2039",
+  "command": "Put the apple in the basket",
+  "created_at": "2026-08-14T11:48:24.761804+00:00",
+  "status": "execution_failed",
+  "initial_state": {
+    "locations": [
+      {
+        "id": "basket",
+        "kind": "container",
+        "openable": false,
+        "is_open": true
+      },
+      {
+        "id": "cupboard",
+        "kind": "container",
+        "openable": true,
+        "is_open": false
+      },
+      {
+        "id": "shelf",
+        "kind": "surface",
+        "openable": false,
+        "is_open": true
+      },
+      {
+        "id": "table",
+        "kind": "surface",
+        "openable": false,
+        "is_open": true
+      }
+    ],
+    "objects": [
+      {
+        "id": "apple",
+        "location": "table",
+        "portable": true
+      },
+      {
+        "id": "can",
+        "location": "shelf",
+        "portable": true
+      },
+      {
+        "id": "cereal_box",
+        "location": "shelf",
+        "portable": true
+      },
+      {
+        "id": "fixed_kettle",
+        "location": "table",
+        "portable": false
+      },
+      {
+        "id": "mug",
+        "location": "shelf",
+        "portable": true
+      },
+      {
+        "id": "orange",
+        "location": "table",
+        "portable": true
+      }
+    ],
+    "robot": {
+      "location": "table",
+      "held_object": null,
+      "observed_objects": []
+    }
+  },
+  "duration_ms": 181047.006,
+  "planner": {
+    "status": "ready",
+    "model": "llama-3.3-70b-versatile",
+    "latency_ms": 667.585,
+    "raw_response": "{\n  \"status\": \"ready\",\n   \"plan\": {\n      \"plan_id\": \"groq-7f4b9029-9349-4505-80ce-3eb8266f345a\",\n      \"goal\": \"Put the apple in the basket\",\n      \"steps\": [\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"pick\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"basket\"\n            }\n         },\n         {\n            \"action\": \"place\",\n            \"arguments\": {\n               \"object\": \"apple\",\n               \"location\": \"basket\"\n            }\n         }\n      ]\n   },\n   \"message\": null\n}",
+    "plan": {
+      "plan_id": "groq-7f4b9029-9349-4505-80ce-3eb8266f345a",
+      "goal": "Put the apple in the basket",
+      "steps": [
+        {
+          "action": "find",
+          "arguments": {
+            "object": "apple"
+          }
+        },
+        {
+          "action": "pick",
+          "arguments": {
+            "object": "apple"
+          }
+        },
+        {
+          "action": "navigate",
+          "arguments": {
+            "location": "basket"
+          }
+        },
+        {
+          "action": "place",
+          "arguments": {
+            "object": "apple",
+            "location": "basket"
+          }
+        }
+      ]
+    },
+    "message": null,
+    "usage": {
+      "prompt_tokens": 673,
+      "completion_tokens": 181,
+      "total_tokens": 854
+    },
+    "attempt_count": 1,
+    "total_latency_ms": 667.585,
+    "correction_attempted": false,
+    "correction_succeeded": false,
+    "attempts": [
+      {
+        "index": 0,
+        "latency_ms": 667.585,
+        "status": "accepted",
+        "raw_response": "{\n  \"status\": \"ready\",\n   \"plan\": {\n      \"plan_id\": \"groq-7f4b9029-9349-4505-80ce-3eb8266f345a\",\n      \"goal\": \"Put the apple in the basket\",\n      \"steps\": [\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"pick\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"basket\"\n            }\n         },\n         {\n            \"action\": \"place\",\n            \"arguments\": {\n               \"object\": \"apple\",\n               \"location\": \"basket\"\n            }\n         }\n      ]\n   },\n   \"message\": null\n}",
+        "validation_issue": null,
+        "error": null
+      }
+    ]
+  },
+  "validation": {
+    "valid": true,
+    "plan_id": "groq-7f4b9029-9349-4505-80ce-3eb8266f345a",
+    "steps_checked": 4,
+    "issues": [],
+    "predicted_final_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "basket",
+          "portable": true
+        },
+        {
+          "id": "can",
+          "location": "shelf",
+          "portable": true
+        },
+        {
+          "id": "cereal_box",
+          "location": "shelf",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        },
+        {
+          "id": "orange",
+          "location": "table",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "basket",
+        "held_object": null,
+        "observed_objects": [
+          "apple"
+        ]
+      }
+    }
+  },
+  "execution": null,
+  "failure": {
+    "stage": "execution",
+    "code": "WebotsExecutionError",
+    "message": "Webots did not finish within 180 seconds.",
+    "details": {}
+  }
+}

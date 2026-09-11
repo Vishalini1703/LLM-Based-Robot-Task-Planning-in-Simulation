@@ -1,0 +1,113 @@
+{
+  "pilot": true,
+  "included_in_final_dataset": false,
+  "trial_id": "pilot-AM01",
+  "case": {
+    "id": "AM01",
+    "category": "ambiguous",
+    "command": "Move it there.",
+    "expected_executable": false,
+    "expected_statuses": [
+      "planner_rejected",
+      "validation_rejected"
+    ],
+    "expected_issue_codes": [],
+    "expected_state": {}
+  },
+  "result": {
+    "run_id": "2ac81f34-3b49-495a-8958-05ade596cb96",
+    "command": "Move it there.",
+    "created_at": "2026-08-05T21:41:46.676641+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 250.407,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 250.279,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Command is ambiguous, missing object and location details.\"\n}",
+      "plan": null,
+      "message": "Command is ambiguous, missing object and location details.",
+      "usage": {
+        "prompt_tokens": 627,
+        "completion_tokens": 30,
+        "total_tokens": 657
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 250.279,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 250.279,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Command is ambiguous, missing object and location details.\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": true,
+    "classification_correct": true
+  }
+}

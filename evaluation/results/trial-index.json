@@ -1,0 +1,1212 @@
+{
+  "started_at": "2026-08-05T21:41:57.536686+00:00",
+  "completed_at": "2026-08-05T21:42:58.547940+00:00",
+  "expected_trials": 150,
+  "actual_trials": 150,
+  "preflight": {
+    "returncode": 0,
+    "output_tail": "ct (test_llm.GroqPlannerTests.test_parses_ready_plan_and_sends_world_contract) ... ok\ntest_rejects_invalid_envelope (test_llm.GroqPlannerTests.test_rejects_invalid_envelope) ... ok\ntest_retries_a_plan_rejected_by_local_validator (test_llm.GroqPlannerTests.test_retries_a_plan_rejected_by_local_validator) ... ok\ntest_executes_ready_valid_plan (test_pipeline.PipelineTests.test_executes_ready_valid_plan) ... ok\ntest_stops_on_planner_rejection (test_pipeline.PipelineTests.test_stops_on_planner_rejection) ... ok\ntest_stops_on_validator_rejection (test_pipeline.PipelineTests.test_stops_on_validator_rejection) ... ok\ntest_loads_quoted_values_and_existing_alias (test_settings.SettingsTests.test_loads_quoted_values_and_existing_alias) ... ok\ntest_process_environment_takes_precedence (test_settings.SettingsTests.test_process_environment_takes_precedence) ... ok\ntest_rejects_missing_key (test_settings.SettingsTests.test_rejects_missing_key) ... ok\ntest_find_records_observation_without_moving_object (test_validator.ValidatorTests.test_find_records_observation_without_moving_object) ... ok\ntest_pick_requires_find (test_validator.ValidatorTests.test_pick_requires_find) ... ok\ntest_rejects_hallucinated_action (test_validator.ValidatorTests.test_rejects_hallucinated_action) ... ok\ntest_rejects_hallucinated_object (test_validator.ValidatorTests.test_rejects_hallucinated_object) ... ok\ntest_rejects_missing_required_plan_field (test_validator.ValidatorTests.test_rejects_missing_required_plan_field) ... ok\ntest_rejects_nonportable_object (test_validator.ValidatorTests.test_rejects_nonportable_object) ... ok\ntest_rejects_open_from_wrong_location (test_validator.ValidatorTests.test_rejects_open_from_wrong_location) ... ok\ntest_rejects_opening_surface (test_validator.ValidatorTests.test_rejects_opening_surface) ... ok\ntest_rejects_pick_when_robot_is_elsewhere (test_validator.ValidatorTests.test_rejects_pick_when_robot_is_elsewhere) ... ok\ntest_rejects_place_in_closed_container (test_validator.ValidatorTests.test_rejects_place_in_closed_container) ... ok\ntest_rejects_second_pick_when_hand_is_occupied (test_validator.ValidatorTests.test_rejects_second_pick_when_hand_is_occupied) ... ok\ntest_rejects_unexpected_plan_field (test_validator.ValidatorTests.test_rejects_unexpected_plan_field) ... ok\ntest_rejects_wrong_action_arguments (test_validator.ValidatorTests.test_rejects_wrong_action_arguments) ... ok\ntest_valid_open_place_close_sequence (test_validator.ValidatorTests.test_valid_open_place_close_sequence) ... ok\ntest_valid_pick_navigate_place_sequence (test_validator.ValidatorTests.test_valid_pick_navigate_place_sequence) ... ok\ntest_discovers_webots_from_webots_home (test_webots_executor.WebotsExecutorTests.test_discovers_webots_from_webots_home) ... ok\ntest_docker_runtime_uses_xvfb_and_project_mount (test_webots_executor.WebotsExecutorTests.test_docker_runtime_uses_xvfb_and_project_mount) ... ok\ntest_launcher_passes_validated_plan_and_required_flags (test_webots_executor.WebotsExecutorTests.test_launcher_passes_validated_plan_and_required_flags) ... ok\ntest_missing_webots_has_portable_configuration_message (test_webots_executor.WebotsExecutorTests.test_missing_webots_has_portable_configuration_message) ... ok\ntest_project_world_contains_required_task_nodes (test_webots_executor.WebotsExecutorTests.test_project_world_contains_required_task_nodes) ... ok\ntest_clone_is_independent (test_world.WorldLoadingTests.test_clone_is_independent) ... ok\ntest_loads_consistent_world (test_world.WorldLoadingTests.test_loads_consistent_world) ... ok\ntest_rejects_duplicate_location (test_world.WorldLoadingTests.test_rejects_duplicate_location) ... ok\ntest_rejects_unheld_unlocated_object (test_world.WorldLoadingTests.test_rejects_unheld_unlocated_object) ... ok\ntest_rejects_unknown_object_location (test_world.WorldLoadingTests.test_rejects_unknown_object_location) ... ok\n\n----------------------------------------------------------------------\nRan 43 tests in 0.054s\n\nOK\n"
+  },
+  "trials": [
+    {
+      "trial_id": "VS01-r01",
+      "case_id": "VS01",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS01-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS02-r01",
+      "case_id": "VS02",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS02-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS03-r01",
+      "case_id": "VS03",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS03-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS04-r01",
+      "case_id": "VS04",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS04-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS05-r01",
+      "case_id": "VS05",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS05-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS06-r01",
+      "case_id": "VS06",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VS06-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM01-r01",
+      "case_id": "VM01",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM01-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM02-r01",
+      "case_id": "VM02",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM02-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM03-r01",
+      "case_id": "VM03",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM03-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VM04-r01",
+      "case_id": "VM04",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM04-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM05-r01",
+      "case_id": "VM05",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM05-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM06-r01",
+      "case_id": "VM06",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM06-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM07-r01",
+      "case_id": "VM07",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM07-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM08-r01",
+      "case_id": "VM08",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\VM08-r01.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP01-r01",
+      "case_id": "IP01",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP01-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP02-r01",
+      "case_id": "IP02",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP02-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP03-r01",
+      "case_id": "IP03",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP03-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP04-r01",
+      "case_id": "IP04",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP04-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP05-r01",
+      "case_id": "IP05",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP05-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP06-r01",
+      "case_id": "IP06",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\IP06-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN01-r01",
+      "case_id": "UN01",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\UN01-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN02-r01",
+      "case_id": "UN02",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\UN02-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN03-r01",
+      "case_id": "UN03",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\UN03-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN04-r01",
+      "case_id": "UN04",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\UN04-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN05-r01",
+      "case_id": "UN05",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\UN05-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM01-r01",
+      "case_id": "AM01",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\AM01-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM02-r01",
+      "case_id": "AM02",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\AM02-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM03-r01",
+      "case_id": "AM03",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\AM03-r01.json",
+      "status": "executed",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "AM04-r01",
+      "case_id": "AM04",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\AM04-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM05-r01",
+      "case_id": "AM05",
+      "repetition": 1,
+      "path": "evaluation\\results\\trials\\AM05-r01.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS01-r02",
+      "case_id": "VS01",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS01-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS02-r02",
+      "case_id": "VS02",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS02-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS03-r02",
+      "case_id": "VS03",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS03-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS04-r02",
+      "case_id": "VS04",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS04-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VS05-r02",
+      "case_id": "VS05",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS05-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS06-r02",
+      "case_id": "VS06",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VS06-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM01-r02",
+      "case_id": "VM01",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM01-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM02-r02",
+      "case_id": "VM02",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM02-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM03-r02",
+      "case_id": "VM03",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM03-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VM04-r02",
+      "case_id": "VM04",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM04-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM05-r02",
+      "case_id": "VM05",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM05-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM06-r02",
+      "case_id": "VM06",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM06-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM07-r02",
+      "case_id": "VM07",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM07-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM08-r02",
+      "case_id": "VM08",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\VM08-r02.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP01-r02",
+      "case_id": "IP01",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP01-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP02-r02",
+      "case_id": "IP02",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP02-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP03-r02",
+      "case_id": "IP03",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP03-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP04-r02",
+      "case_id": "IP04",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP04-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP05-r02",
+      "case_id": "IP05",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP05-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP06-r02",
+      "case_id": "IP06",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\IP06-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN01-r02",
+      "case_id": "UN01",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\UN01-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN02-r02",
+      "case_id": "UN02",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\UN02-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN03-r02",
+      "case_id": "UN03",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\UN03-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN04-r02",
+      "case_id": "UN04",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\UN04-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN05-r02",
+      "case_id": "UN05",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\UN05-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM01-r02",
+      "case_id": "AM01",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\AM01-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM02-r02",
+      "case_id": "AM02",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\AM02-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM03-r02",
+      "case_id": "AM03",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\AM03-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM04-r02",
+      "case_id": "AM04",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\AM04-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM05-r02",
+      "case_id": "AM05",
+      "repetition": 2,
+      "path": "evaluation\\results\\trials\\AM05-r02.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS01-r03",
+      "case_id": "VS01",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS01-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS02-r03",
+      "case_id": "VS02",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS02-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS03-r03",
+      "case_id": "VS03",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS03-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS04-r03",
+      "case_id": "VS04",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS04-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS05-r03",
+      "case_id": "VS05",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS05-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS06-r03",
+      "case_id": "VS06",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VS06-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM01-r03",
+      "case_id": "VM01",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM01-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM02-r03",
+      "case_id": "VM02",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM02-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM03-r03",
+      "case_id": "VM03",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM03-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VM04-r03",
+      "case_id": "VM04",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM04-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM05-r03",
+      "case_id": "VM05",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM05-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM06-r03",
+      "case_id": "VM06",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM06-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM07-r03",
+      "case_id": "VM07",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM07-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM08-r03",
+      "case_id": "VM08",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\VM08-r03.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP01-r03",
+      "case_id": "IP01",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP01-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP02-r03",
+      "case_id": "IP02",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP02-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP03-r03",
+      "case_id": "IP03",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP03-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP04-r03",
+      "case_id": "IP04",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP04-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP05-r03",
+      "case_id": "IP05",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP05-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP06-r03",
+      "case_id": "IP06",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\IP06-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN01-r03",
+      "case_id": "UN01",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\UN01-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN02-r03",
+      "case_id": "UN02",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\UN02-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN03-r03",
+      "case_id": "UN03",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\UN03-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN04-r03",
+      "case_id": "UN04",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\UN04-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN05-r03",
+      "case_id": "UN05",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\UN05-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM01-r03",
+      "case_id": "AM01",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\AM01-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM02-r03",
+      "case_id": "AM02",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\AM02-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM03-r03",
+      "case_id": "AM03",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\AM03-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM04-r03",
+      "case_id": "AM04",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\AM04-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM05-r03",
+      "case_id": "AM05",
+      "repetition": 3,
+      "path": "evaluation\\results\\trials\\AM05-r03.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS01-r04",
+      "case_id": "VS01",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS01-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS02-r04",
+      "case_id": "VS02",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS02-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS03-r04",
+      "case_id": "VS03",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS03-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS04-r04",
+      "case_id": "VS04",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS04-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VS05-r04",
+      "case_id": "VS05",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS05-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS06-r04",
+      "case_id": "VS06",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VS06-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM01-r04",
+      "case_id": "VM01",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM01-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM02-r04",
+      "case_id": "VM02",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM02-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM03-r04",
+      "case_id": "VM03",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM03-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VM04-r04",
+      "case_id": "VM04",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM04-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM05-r04",
+      "case_id": "VM05",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM05-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM06-r04",
+      "case_id": "VM06",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM06-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM07-r04",
+      "case_id": "VM07",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM07-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM08-r04",
+      "case_id": "VM08",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\VM08-r04.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP01-r04",
+      "case_id": "IP01",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP01-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP02-r04",
+      "case_id": "IP02",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP02-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP03-r04",
+      "case_id": "IP03",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP03-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP04-r04",
+      "case_id": "IP04",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP04-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP05-r04",
+      "case_id": "IP05",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP05-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP06-r04",
+      "case_id": "IP06",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\IP06-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN01-r04",
+      "case_id": "UN01",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\UN01-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN02-r04",
+      "case_id": "UN02",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\UN02-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN03-r04",
+      "case_id": "UN03",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\UN03-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN04-r04",
+      "case_id": "UN04",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\UN04-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN05-r04",
+      "case_id": "UN05",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\UN05-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM01-r04",
+      "case_id": "AM01",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\AM01-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM02-r04",
+      "case_id": "AM02",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\AM02-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM03-r04",
+      "case_id": "AM03",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\AM03-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM04-r04",
+      "case_id": "AM04",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\AM04-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM05-r04",
+      "case_id": "AM05",
+      "repetition": 4,
+      "path": "evaluation\\results\\trials\\AM05-r04.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS01-r05",
+      "case_id": "VS01",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS01-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS02-r05",
+      "case_id": "VS02",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS02-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS03-r05",
+      "case_id": "VS03",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS03-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS04-r05",
+      "case_id": "VS04",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS04-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": false
+    },
+    {
+      "trial_id": "VS05-r05",
+      "case_id": "VS05",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS05-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VS06-r05",
+      "case_id": "VS06",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VS06-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM01-r05",
+      "case_id": "VM01",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM01-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM02-r05",
+      "case_id": "VM02",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM02-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM03-r05",
+      "case_id": "VM03",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM03-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM04-r05",
+      "case_id": "VM04",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM04-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM05-r05",
+      "case_id": "VM05",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM05-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM06-r05",
+      "case_id": "VM06",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM06-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM07-r05",
+      "case_id": "VM07",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM07-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "VM08-r05",
+      "case_id": "VM08",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\VM08-r05.json",
+      "status": "executed",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP01-r05",
+      "case_id": "IP01",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP01-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP02-r05",
+      "case_id": "IP02",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP02-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP03-r05",
+      "case_id": "IP03",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP03-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP04-r05",
+      "case_id": "IP04",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP04-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP05-r05",
+      "case_id": "IP05",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP05-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "IP06-r05",
+      "case_id": "IP06",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\IP06-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN01-r05",
+      "case_id": "UN01",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\UN01-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN02-r05",
+      "case_id": "UN02",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\UN02-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN03-r05",
+      "case_id": "UN03",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\UN03-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN04-r05",
+      "case_id": "UN04",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\UN04-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "UN05-r05",
+      "case_id": "UN05",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\UN05-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM01-r05",
+      "case_id": "AM01",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\AM01-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM02-r05",
+      "case_id": "AM02",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\AM02-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM03-r05",
+      "case_id": "AM03",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\AM03-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM04-r05",
+      "case_id": "AM04",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\AM04-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    },
+    {
+      "trial_id": "AM05-r05",
+      "case_id": "AM05",
+      "repetition": 5,
+      "path": "evaluation\\results\\trials\\AM05-r05.json",
+      "status": "planner_rejected",
+      "classification_correct": true
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "trial_id": "AM05-r03",
+  "case": {
+    "id": "AM05",
+    "category": "ambiguous",
+    "command": "Tidy the kitchen.",
+    "expected_executable": false,
+    "expected_statuses": [
+      "planner_rejected",
+      "validation_rejected"
+    ],
+    "expected_issue_codes": [],
+    "expected_state": {}
+  },
+  "repetition": 3,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "c954df44-a0d9-4ad6-9895-b6a83cbd69ef",
+    "command": "Tidy the kitchen.",
+    "created_at": "2026-08-05T21:42:34.371832+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 270.983,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 270.858,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"The command 'Tidy the kitchen' is ambiguous and does not specify which objects to move or where to move them.\"\n}",
+      "plan": null,
+      "message": "The command 'Tidy the kitchen' is ambiguous and does not specify which objects to move or where to move them.",
+      "usage": {
+        "prompt_tokens": 626,
+        "completion_tokens": 44,
+        "total_tokens": 670
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 270.858,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 270.858,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"The command 'Tidy the kitchen' is ambiguous and does not specify which objects to move or where to move them.\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": true,
+    "classification_correct": true
+  }
+}

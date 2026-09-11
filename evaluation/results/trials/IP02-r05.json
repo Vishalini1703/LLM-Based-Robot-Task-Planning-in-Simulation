@@ -1,0 +1,116 @@
+{
+  "trial_id": "IP02-r05",
+  "case": {
+    "id": "IP02",
+    "category": "invalid_precondition",
+    "command": "Close the cupboard even though it is already closed.",
+    "expected_executable": false,
+    "expected_statuses": [
+      "planner_rejected",
+      "validation_rejected"
+    ],
+    "expected_issue_codes": [
+      "ALREADY_CLOSED"
+    ],
+    "expected_state": {}
+  },
+  "repetition": 5,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "591d8e8c-db7d-490a-8d46-b33aec747ec2",
+    "command": "Close the cupboard even though it is already closed.",
+    "created_at": "2026-08-05T21:42:53.793695+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 211.995,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 211.882,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot close the cupboard as it is already closed.\"\n}",
+      "plan": null,
+      "message": "Cannot close the cupboard as it is already closed.",
+      "usage": {
+        "prompt_tokens": 631,
+        "completion_tokens": 30,
+        "total_tokens": 661
+      },
+      "attempt_count": 1,
+      "total_latency_ms": 211.882,
+      "correction_attempted": false,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 211.882,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Cannot close the cupboard as it is already closed.\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": true,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": true,
+    "classification_correct": true
+  }
+}

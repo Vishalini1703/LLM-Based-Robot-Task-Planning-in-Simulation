@@ -1,0 +1,137 @@
+{
+  "trial_id": "VM03-r03",
+  "case": {
+    "id": "VM03",
+    "category": "valid_multi",
+    "command": "Put the apple in the cupboard and close the cupboard.",
+    "expected_executable": true,
+    "expected_statuses": [
+      "executed"
+    ],
+    "expected_issue_codes": [],
+    "expected_state": {
+      "robot": {
+        "location": "cupboard",
+        "held_object": null,
+        "observed_objects": []
+      },
+      "object_locations": {
+        "apple": "cupboard"
+      },
+      "location_open": {
+        "cupboard": false
+      }
+    }
+  },
+  "repetition": 3,
+  "backend": "memory",
+  "frozen_settings_sha256": "ea40c0c2ac45b7eab8c0a02a207a061de5de94b2191543cbb271823c710b7b0a",
+  "result": {
+    "run_id": "cab05541-6841-410f-934b-1a652fedab55",
+    "command": "Put the apple in the cupboard and close the cupboard.",
+    "created_at": "2026-08-05T21:42:25.431803+00:00",
+    "status": "planner_rejected",
+    "initial_state": {
+      "locations": [
+        {
+          "id": "basket",
+          "kind": "container",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "cupboard",
+          "kind": "container",
+          "openable": true,
+          "is_open": false
+        },
+        {
+          "id": "shelf",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        },
+        {
+          "id": "table",
+          "kind": "surface",
+          "openable": false,
+          "is_open": true
+        }
+      ],
+      "objects": [
+        {
+          "id": "apple",
+          "location": "table",
+          "portable": true
+        },
+        {
+          "id": "fixed_kettle",
+          "location": "table",
+          "portable": false
+        },
+        {
+          "id": "mug",
+          "location": "shelf",
+          "portable": true
+        }
+      ],
+      "robot": {
+        "location": "table",
+        "held_object": null,
+        "observed_objects": []
+      }
+    },
+    "duration_ms": 833.399,
+    "planner": {
+      "status": "rejected",
+      "model": "llama-3.3-70b-versatile",
+      "latency_ms": 249.38,
+      "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Object 'apple' has no world location\"\n}",
+      "plan": null,
+      "message": "Object 'apple' has no world location",
+      "usage": {
+        "prompt_tokens": 962,
+        "completion_tokens": 29,
+        "total_tokens": 991
+      },
+      "attempt_count": 2,
+      "total_latency_ms": 833.035,
+      "correction_attempted": true,
+      "correction_succeeded": false,
+      "attempts": [
+        {
+          "index": 0,
+          "latency_ms": 583.655,
+          "status": "validation_rejected",
+          "raw_response": "{\n  \"status\": \"ready\",\n   \"plan\": {\n      \"plan_id\": \"groq-71f86e46-4e81-4275-a923-0ca1cf5d4782\",\n      \"goal\": \"Put the apple in the cupboard and close the cupboard\",\n      \"steps\": [\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"pick\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"navigate\",\n            \"arguments\": {\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"open\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"find\",\n            \"arguments\": {\n               \"object\": \"apple\"\n            }\n         },\n         {\n            \"action\": \"place\",\n            \"arguments\": {\n               \"object\": \"apple\",\n               \"location\": \"cupboard\"\n            }\n         },\n         {\n            \"action\": \"close\",\n            \"arguments\": {\n               \"container\": \"cupboard\"\n            }\n         }\n      ]\n   },\n   \"message\": null\n}",
+          "validation_issue": {
+            "code": "OBJECT_UNAVAILABLE",
+            "message": "Object 'apple' has no world location.",
+            "step_index": 4
+          },
+          "error": null
+        },
+        {
+          "index": 1,
+          "latency_ms": 249.38,
+          "status": "rejected",
+          "raw_response": "{\n  \"status\": \"rejected\",\n   \"plan\": null,\n   \"message\": \"Object 'apple' has no world location\"\n}",
+          "validation_issue": null,
+          "error": null
+        }
+      ]
+    },
+    "validation": null,
+    "execution": null,
+    "failure": null
+  },
+  "assessment": {
+    "observed_status": "planner_rejected",
+    "observed_issue_code": null,
+    "expected_status": false,
+    "expected_issue_acceptable": true,
+    "task_success": false,
+    "correct_rejection": false,
+    "classification_correct": false
+  }
+}
