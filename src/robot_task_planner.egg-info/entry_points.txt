@@ -1,0 +1,5 @@
+[console_scripts]
+robot-cnn = robot_planner.cnn_cli:main
+robot-evaluate = robot_planner.evaluation_cli:main
+robot-plan = robot_planner.cli:main
+robot-task = robot_planner.app_cli:main
